@@ -1,16 +1,11 @@
 import { motion } from "framer-motion";
 import { Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <div
-        className="absolute inset-0 bg-cover bg-center opacity-40"
-        style={{ backgroundImage: `url(${heroBg})` }}
-      />
-      <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background" />
+      <div className="absolute inset-0 bg-gradient-to-b from-card via-background to-background" />
 
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
         <motion.p
@@ -39,7 +34,7 @@ const HeroSection = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-10 font-light"
         >
-          Redefinindo os limites humanos através dos esportes de endurance.
+          Redefining human boundaries through endurance sports.
         </motion.p>
 
         <motion.div
@@ -55,7 +50,7 @@ const HeroSection = () => {
           >
             <a href="https://open.spotify.com/show/4wMFo25lNcsgjqfMon1oBS" target="_blank" rel="noopener noreferrer">
               <Play className="h-5 w-5" />
-              Ouça Agora
+              Listen Now
             </a>
           </Button>
           <Button
@@ -64,7 +59,7 @@ const HeroSection = () => {
             className="text-lg px-8 py-6 rounded-full border-muted-foreground/30 hover:border-primary/50"
             asChild
           >
-            <a href="#series">Conheça as Séries</a>
+            <a href="#series">Explore the Series</a>
           </Button>
         </motion.div>
       </div>

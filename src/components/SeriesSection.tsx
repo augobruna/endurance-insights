@@ -6,15 +6,15 @@ const series = [
     icon: Mic2,
     title: "Expert Series",
     description:
-      "Entrevistas aprofundadas com especialistas em ciência do esporte, nutrição, fisiologia e treinamento. Conteúdo técnico traduzido de forma acessível para quem busca performance e saúde.",
-    tag: "Conhecimento",
+      "In-depth interviews with specialists in sports science, nutrition, physiology, and training. Technical content made accessible for anyone pursuing performance and health.",
+    tag: "Knowledge",
   },
   {
     icon: Users,
     title: "Guest Series",
     description:
-      "Histórias reais de atletas amadores e profissionais que vivem o endurance no dia a dia. Inspiração, desafios e a jornada de quem decidiu testar seus próprios limites.",
-    tag: "Inspiração",
+      "Real stories from amateur and professional athletes who live endurance every day. Inspiration, challenges, and the journey of those who decided to test their own limits.",
+    tag: "Inspiration",
   },
 ];
 
@@ -29,13 +29,13 @@ const SeriesSection = () => {
           className="text-center mb-16"
         >
           <p className="uppercase tracking-[0.3em] text-sm font-medium mb-4 gradient-text">
-            Duas Séries
+            Two Series
           </p>
           <h2 className="text-5xl md:text-6xl">
-            Ciência & Histórias
+            Science & Stories
           </h2>
           <p className="text-muted-foreground mt-4 max-w-xl mx-auto font-light">
-            Duas perspectivas complementares sobre o universo do endurance.
+            Two complementary perspectives on the world of endurance.
           </p>
         </motion.div>
 

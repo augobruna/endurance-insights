@@ -1,19 +1,16 @@
 import { motion } from "framer-motion";
-import hostBruna from "@/assets/host-bruna.jpg";
-import hostFabi from "@/assets/host-fabi.jpg";
+import { User } from "lucide-react";
 
 const hosts = [
   {
     name: "Bruna",
-    role: "Co-fundadora da augo · Coach na Jornada Endurance",
-    image: hostBruna,
-    bio: "Apaixonada por endurance e ciência do esporte, Bruna traz sua experiência como coach e empreendedora para explorar os limites da performance humana.",
+    role: "Co-founder of augo · Coach at Jornada Endurance",
+    bio: "Passionate about endurance and sports science, Bruna brings her experience as a coach and entrepreneur to explore the limits of human performance.",
   },
   {
     name: "Fabi",
-    role: "Co-fundadora da augo · Coach na Jornada Endurance",
-    image: hostFabi,
-    bio: "Com uma abordagem prática e empática, Fabi conecta ciência e experiência real para ajudar atletas a encontrarem seu potencial máximo.",
+    role: "Co-founder of augo · Coach at Jornada Endurance",
+    bio: "With a practical and empathetic approach, Fabi connects science and real-world experience to help athletes reach their maximum potential.",
   },
 ];
 
@@ -28,10 +25,10 @@ const HostsSection = () => {
           className="text-center mb-16"
         >
           <p className="uppercase tracking-[0.3em] text-sm font-medium mb-4 gradient-text">
-            Apresentadoras
+            Hosts
           </p>
           <h2 className="text-5xl md:text-6xl">
-            Conheça as Hosts
+            Meet the Hosts
           </h2>
         </motion.div>
 
@@ -46,13 +43,8 @@ const HostsSection = () => {
               className="text-center"
             >
               <div className="relative w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden p-[2px] gradient-bg">
-                <div className="w-full h-full rounded-full overflow-hidden">
-                  <img
-                    src={host.image}
-                    alt={`${host.name} - Host do Human Endurance Podcast`}
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                  />
+                <div className="w-full h-full rounded-full overflow-hidden bg-card flex items-center justify-center">
+                  <User className="h-20 w-20 text-muted-foreground" />
                 </div>
               </div>
               <h3 className="text-3xl mb-1">{host.name}</h3>

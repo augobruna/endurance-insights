@@ -1,18 +1,19 @@
 import { motion } from "framer-motion";
-import { User } from "lucide-react";
 import hostFabi from "@/assets/host-fabi.jpg";
+import hostBruna from "@/assets/host-bruna.jpg";
 
 const hosts = [
   {
     name: "Bruna",
-    role: "Co-founder of augo · Coach at Jornada Endurance",
-    bio: "Passionate about endurance and sports science, Bruna brings her experience as a coach and entrepreneur to explore the limits of human performance.",
-    image: null,
+    roleJsx: true,
+    roleText: "Runner · Coach · Co-founder of",
+    bio: "Bruna competed in cross-country and track at the collegiate level in the U.S. With over a decade of running experience, she has completed 8 marathons, 1 ultra-marathon, 2 70.3 Ironmans, and numerous half-marathons and 5Ks. Her personal best is 3h14 in the marathon and 18:57 in the 5K.\n\nWith 3 years of coaching experience, Bruna has helped 50+ athletes to achieve their goals and cross the finish line in races ranging from 5Ks to ultra-marathons.",
+    image: hostBruna,
   },
   {
     name: "Fabi",
-    role: null,
     roleJsx: true,
+    roleText: "Triathlete · Coach · Co-founder of",
     bio: "Fabienne discovered triathlon in her late 20s, and within 3 years, she went from not being able to swim 25 meters to completing a half-distance triathlon in 4 hours and 50 minutes, and her first full-distance triathlon in under 12 hours.\n\nShe has been coaching for a year, helping beginners get started in the sport and successfully complete sprint and half-distance triathlon races.",
     image: hostFabi,
   },
@@ -48,22 +49,14 @@ const HostsSection = () => {
             >
               <div className="relative w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden p-[2px] gradient-bg">
                 <div className="w-full h-full rounded-full overflow-hidden bg-card flex items-center justify-center">
-                  {host.image ? (
-                    <img src={host.image} alt={host.name} className="w-full h-full object-cover" />
-                  ) : (
-                    <User className="h-20 w-20 text-muted-foreground" />
-                  )}
+                  <img src={host.image} alt={host.name} className="w-full h-full object-cover" />
                 </div>
               </div>
               <h3 className="text-3xl mb-1">{host.name}</h3>
-              {host.roleJsx ? (
-                <p className="text-primary text-sm mb-4">
-                  Triathlete · Coach · Co-founder of{" "}
-                  <a href="https://www.augotraining.com" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">augo</a>
-                </p>
-              ) : (
-                <p className="text-primary text-sm mb-4">{host.role}</p>
-              )}
+              <p className="text-primary text-sm mb-4">
+                {host.roleText}{" "}
+                <a href="https://www.augotraining.com" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">augo</a>
+              </p>
               <p className="text-muted-foreground font-light leading-relaxed whitespace-pre-line">
                 {host.bio}
               </p>

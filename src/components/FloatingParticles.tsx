@@ -22,7 +22,7 @@ const FloatingParticles = () => {
   const particles: Particle[] = useMemo(() => {
     return Array.from({ length: 18 }, (_, i) => ({
       id: i,
-      size: Math.random() * 4 + 2,
+      size: Math.random() * 6 + 4,
       x: Math.random() * 100,
       y: Math.random() * 100,
       duration: Math.random() * 20 + 25,
@@ -43,12 +43,12 @@ const FloatingParticles = () => {
             left: `${p.x}%`,
             top: `${p.y}%`,
             background: p.color,
-            filter: `blur(${p.size > 4 ? 1 : 0}px)`,
+            filter: `blur(${p.size > 6 ? 2 : 1}px)`,
           }}
           animate={{
             y: [0, -80, 20, -40, 0],
             x: [0, 30, -20, 40, 0],
-            opacity: [0.15, 0.4, 0.2, 0.35, 0.15],
+            opacity: [0.25, 0.6, 0.3, 0.5, 0.25],
             scale: [1, 1.3, 0.9, 1.15, 1],
           }}
           transition={{
@@ -64,12 +64,12 @@ const FloatingParticles = () => {
       <motion.div
         className="absolute rounded-full"
         style={{
-          width: 300,
-          height: 300,
+          width: 400,
+          height: 400,
           left: "10%",
           top: "20%",
           background: "radial-gradient(circle, hsl(330, 85%, 60%) 0%, transparent 70%)",
-          opacity: 0.03,
+          opacity: 0.1,
         }}
         animate={{
           x: [0, 60, -30, 0],
@@ -81,12 +81,12 @@ const FloatingParticles = () => {
       <motion.div
         className="absolute rounded-full"
         style={{
-          width: 250,
-          height: 250,
+          width: 350,
+          height: 350,
           right: "15%",
           top: "60%",
           background: "radial-gradient(circle, hsl(260, 60%, 50%) 0%, transparent 70%)",
-          opacity: 0.03,
+          opacity: 0.08,
         }}
         animate={{
           x: [0, -50, 40, 0],

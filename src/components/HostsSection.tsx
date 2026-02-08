@@ -27,7 +27,7 @@ const HostsSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <p className="text-primary uppercase tracking-[0.3em] text-sm font-medium mb-4">
+          <p className="uppercase tracking-[0.3em] text-sm font-medium mb-4 gradient-text">
             Apresentadoras
           </p>
           <h2 className="text-5xl md:text-6xl">
@@ -45,13 +45,15 @@ const HostsSection = () => {
               transition={{ delay: i * 0.2 }}
               className="text-center"
             >
-              <div className="relative w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden ring-2 ring-primary/20">
-                <img
-                  src={host.image}
-                  alt={`${host.name} - Host do Human Endurance Podcast`}
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
+              <div className="relative w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden p-[2px] gradient-bg">
+                <div className="w-full h-full rounded-full overflow-hidden">
+                  <img
+                    src={host.image}
+                    alt={`${host.name} - Host do Human Endurance Podcast`}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
               </div>
               <h3 className="text-3xl mb-1">{host.name}</h3>
               <p className="text-primary text-sm mb-4">{host.role}</p>

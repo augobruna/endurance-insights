@@ -28,7 +28,7 @@ const SeriesSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <p className="text-primary uppercase tracking-[0.3em] text-sm font-medium mb-4">
+          <p className="uppercase tracking-[0.3em] text-sm font-medium mb-4 gradient-text">
             Duas Séries
           </p>
           <h2 className="text-5xl md:text-6xl">
@@ -49,11 +49,11 @@ const SeriesSection = () => {
               transition={{ delay: i * 0.2 }}
               className="group relative rounded-2xl bg-card border border-border p-10 hover:border-primary/40 transition-colors duration-500"
             >
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 via-secondary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="relative z-10">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                    <s.icon className="h-6 w-6 text-primary" />
+                  <div className="h-12 w-12 rounded-xl gradient-bg flex items-center justify-center">
+                    <s.icon className="h-6 w-6 text-primary-foreground" />
                   </div>
                   <span className="text-xs uppercase tracking-[0.2em] text-muted-foreground">
                     {s.tag}

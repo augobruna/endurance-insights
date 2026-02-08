@@ -26,8 +26,8 @@ const ListenSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <div className="h-16 w-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
-            <Headphones className="h-8 w-8 text-primary" />
+          <div className="h-16 w-16 rounded-full gradient-bg flex items-center justify-center mx-auto mb-6">
+            <Headphones className="h-8 w-8 text-primary-foreground" />
           </div>
           <h2 className="text-5xl md:text-6xl mb-4">
             Onde Ouvir

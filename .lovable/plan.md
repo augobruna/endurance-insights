@@ -1,30 +1,19 @@
 
 
-## Refine Host Bios
+## Make Floating Particles More Visible
 
-Update both host bios in `src/components/HostsSection.tsx` with the new narratives.
+The FloatingParticles component is correctly implemented and rendering, but the particles are nearly invisible because:
+- Particle dots are only 2-6px in size
+- Opacity ranges from 0.15 to 0.4 (very faint)
+- Gradient orbs are at 0.03 opacity (essentially invisible)
 
-### Bruna's New Bio
-- Start with being a lifelong athlete, playing tennis competitively as a child/teenager
-- Mention tennis brought her to Emory University in Atlanta
-- Switched from NCAA tennis to running track and cross-country, fell in love with running
-- Over 10 years of marathon experience, coaching runners since 2021
-- Favorite distance: the marathon
-- Left her corporate job to co-found augo, setting a new standard for endurance sports coaching
-- Remove all personal bests
+### Changes to `src/components/FloatingParticles.tsx`
 
-### Fabi's New Bio
-- Keep the strong intro about discovering triathlon in her late 20s and the progression
-- Remove the specific time personal bests (4h50, under 12 hours)
-- Coaching triathlete beginners since 2023
-- Together with Bruna, decided to start augo to work in an industry she truly loves
+1. **Increase particle sizes** from 2-6px to 4-10px range
+2. **Boost particle opacity** from 0.15-0.4 to 0.25-0.6
+3. **Increase gradient orb opacity** from 0.03 to 0.08-0.1
+4. **Make gradient orbs larger** (400px and 350px) for a more noticeable ambient glow
+5. **Add slight blur** to more particles for a softer, glowing feel
 
-### Updated Role Titles
-- Bruna: "Runner . Coach . Co-founder of augo" (unchanged)
-- Fabi: "Triathlete . Coach . Co-founder of augo" (unchanged)
-
-### Technical Details
-- Single file edit: `src/components/HostsSection.tsx`
-- Update the `bio` strings in the `hosts` array
-- No structural or styling changes needed
+These adjustments will make the floating effect clearly visible while still keeping it subtle and non-distracting as a background decoration.
 

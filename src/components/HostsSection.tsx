@@ -24,7 +24,7 @@ const hosts = [
 
 const HostsSection = () => {
   return (
-    <section id="hosts" className="py-28 px-6 bg-card/50">
+    <section id="hosts" className="py-28 px-6">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

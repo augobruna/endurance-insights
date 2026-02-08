@@ -6,6 +6,7 @@ import HostsSection from "@/components/HostsSection";
 import ListenSection from "@/components/ListenSection";
 import Footer from "@/components/Footer";
 import FloatingParticles from "@/components/FloatingParticles";
+import SectionDivider from "@/components/SectionDivider";
 
 const Index = () => {
   return (
@@ -14,8 +15,11 @@ const Index = () => {
       <Navbar />
       <HeroSection />
       <StorySection />
+      <SectionDivider />
       <SeriesSection />
+      <SectionDivider />
       <HostsSection />
+      <SectionDivider />
       <ListenSection />
       <Footer />
     </main>

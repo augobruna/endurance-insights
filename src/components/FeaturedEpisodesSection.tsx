@@ -2,19 +2,19 @@ import { motion } from "framer-motion";
 
 const episodes = [
   {
-    title: "Training Smarter, Not Harder",
-    episodeId: "4Xz5KOjjWGmXvDHMRKbknE",
-    description: "Expert insights on optimizing your training load.",
+    title: "",
+    episodeId: "4mcOg8WWjLRHgBvBh5Bydw",
+    description: "",
   },
   {
-    title: "From Couch to Ironman",
-    episodeId: "1qxmUVoA2OjJ6AiRsoZKMR",
-    description: "A real story of transformation and grit.",
+    title: "",
+    episodeId: "065AbRqiNiBQdM1NdrQ1Lu",
+    description: "",
   },
   {
-    title: "Fueling for Endurance",
-    episodeId: "4nP1JFTVaBnOXMaOVBMOgz",
-    description: "What to eat before, during, and after long efforts.",
+    title: "",
+    episodeId: "05JE2TWyNExFYDiFl5Ytno",
+    description: "",
   },
 ];
 

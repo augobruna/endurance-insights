@@ -16,6 +16,21 @@ const episodes = [
     episodeId: "05JE2TWyNExFYDiFl5Ytno",
     description: "",
   },
+  {
+    title: "",
+    episodeId: "676zVWIygiGTxEi5p6ThDT",
+    description: "",
+  },
+  {
+    title: "",
+    episodeId: "2O1S5tjfN8MmNp7BmzlQgS",
+    description: "",
+  },
+  {
+    title: "",
+    episodeId: "6x70jiH6339mrQByB7mDtF",
+    description: "",
+  },
 ];
 
 const FeaturedEpisodesSection = () => {
@@ -44,8 +59,7 @@ const FeaturedEpisodesSection = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.15 }}
-              className="flex flex-col gap-4"
+              transition={{ delay: (i % 3) * 0.15 }}
             >
               <iframe
                 src={`https://open.spotify.com/embed/episode/${ep.episodeId}?utm_source=generator&theme=0`}
@@ -55,11 +69,8 @@ const FeaturedEpisodesSection = () => {
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 loading="lazy"
                 className="rounded-xl"
-                title={ep.title}
+                title={`Episode ${i + 1}`}
               />
-              <p className="text-sm text-muted-foreground font-light text-center">
-                {ep.description}
-              </p>
             </motion.div>
           ))}
         </div>

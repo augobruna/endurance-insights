@@ -5,10 +5,12 @@ import SeriesSection from "@/components/SeriesSection";
 import HostsSection from "@/components/HostsSection";
 import ListenSection from "@/components/ListenSection";
 import Footer from "@/components/Footer";
+import FloatingParticles from "@/components/FloatingParticles";
 
 const Index = () => {
   return (
-    <main>
+    <main className="relative">
+      <FloatingParticles />
       <Navbar />
       <HeroSection />
       <StorySection />

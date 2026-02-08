@@ -1,19 +1,16 @@
 import { motion } from "framer-motion";
-import { Mic2, Users } from "lucide-react";
 
 const series = [
   {
-    icon: Mic2,
     title: "Expert Series",
     description:
-      "In-depth interviews with specialists in sports science, nutrition, physiology, and training. Technical content made accessible for anyone pursuing performance and health.",
+      "In-depth conversations with specialists in sports science, nutrition, physiology, and coaching. Practical, actionable insights to help you train smarter — no PhD required.",
     tag: "Knowledge",
   },
   {
-    icon: Users,
     title: "Guest Series",
     description:
-      "Real stories from amateur and professional athletes who live endurance every day. Inspiration, challenges, and the journey of those who decided to test their own limits.",
+      "Real stories from everyday athletes doing extraordinary things. Full-time jobs, families, responsibilities — and still chasing ultras, ironmans, and personal bests. Proof that incredible feats don't require endless free time, just consistency and determination.",
     tag: "Inspiration",
   },
 ];
@@ -51,14 +48,9 @@ const SeriesSection = () => {
             >
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 via-secondary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="relative z-10">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="h-12 w-12 rounded-xl gradient-bg flex items-center justify-center">
-                    <s.icon className="h-6 w-6 text-primary-foreground" />
-                  </div>
-                  <span className="text-xs uppercase tracking-[0.2em] text-muted-foreground">
-                    {s.tag}
-                  </span>
-                </div>
+                <span className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-6 block">
+                  {s.tag}
+                </span>
                 <h3 className="text-3xl mb-4">{s.title}</h3>
                 <p className="text-muted-foreground font-light leading-relaxed">
                   {s.description}

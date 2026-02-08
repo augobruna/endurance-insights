@@ -26,10 +26,10 @@ const Navbar = () => {
           </span>
         </a>
         <div className="hidden md:flex items-center gap-8">
-          {["Séries", "Hosts", "Ouvir"].map((item) => (
+          {["Series", "Hosts", "Listen"].map((item) => (
             <a
               key={item}
-              href={`#${item === "Séries" ? "series" : item === "Hosts" ? "hosts" : "listen"}`}
+              href={`#${item.toLowerCase()}`}
               className="text-sm text-muted-foreground hover:text-primary transition-colors uppercase tracking-widest"
             >
               {item}

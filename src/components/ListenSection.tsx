@@ -30,10 +30,10 @@ const ListenSection = () => {
             <Headphones className="h-8 w-8 text-primary-foreground" />
           </div>
           <h2 className="text-5xl md:text-6xl mb-4">
-            Onde Ouvir
+            Where to Listen
           </h2>
           <p className="text-muted-foreground font-light mb-10 max-w-md mx-auto">
-            Escolha sua plataforma favorita e acompanhe todos os episódios.
+            Pick your favorite platform and follow all episodes.
           </p>
         </motion.div>
 

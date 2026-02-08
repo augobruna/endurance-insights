@@ -1,0 +1,102 @@
+import { motion } from "framer-motion";
+import { useMemo } from "react";
+
+interface Particle {
+  id: number;
+  size: number;
+  x: number;
+  y: number;
+  duration: number;
+  delay: number;
+  color: string;
+}
+
+const colors = [
+  "hsl(330, 85%, 60%)",   // primary pink
+  "hsl(260, 60%, 50%)",   // secondary purple
+  "hsl(30, 90%, 55%)",    // accent orange
+  "hsl(210, 90%, 50%)",   // blue
+];
+
+const FloatingParticles = () => {
+  const particles: Particle[] = useMemo(() => {
+    return Array.from({ length: 18 }, (_, i) => ({
+      id: i,
+      size: Math.random() * 4 + 2,
+      x: Math.random() * 100,
+      y: Math.random() * 100,
+      duration: Math.random() * 20 + 25,
+      delay: Math.random() * -30,
+      color: colors[i % colors.length],
+    }));
+  }, []);
+
+  return (
+    <div className="fixed inset-0 pointer-events-none overflow-hidden z-0" aria-hidden="true">
+      {particles.map((p) => (
+        <motion.div
+          key={p.id}
+          className="absolute rounded-full"
+          style={{
+            width: p.size,
+            height: p.size,
+            left: `${p.x}%`,
+            top: `${p.y}%`,
+            background: p.color,
+            filter: `blur(${p.size > 4 ? 1 : 0}px)`,
+          }}
+          animate={{
+            y: [0, -80, 20, -40, 0],
+            x: [0, 30, -20, 40, 0],
+            opacity: [0.15, 0.4, 0.2, 0.35, 0.15],
+            scale: [1, 1.3, 0.9, 1.15, 1],
+          }}
+          transition={{
+            duration: p.duration,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: p.delay,
+          }}
+        />
+      ))}
+
+      {/* Soft gradient orbs */}
+      <motion.div
+        className="absolute rounded-full"
+        style={{
+          width: 300,
+          height: 300,
+          left: "10%",
+          top: "20%",
+          background: "radial-gradient(circle, hsl(330, 85%, 60%) 0%, transparent 70%)",
+          opacity: 0.03,
+        }}
+        animate={{
+          x: [0, 60, -30, 0],
+          y: [0, -40, 30, 0],
+          scale: [1, 1.2, 0.9, 1],
+        }}
+        transition={{ duration: 35, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <motion.div
+        className="absolute rounded-full"
+        style={{
+          width: 250,
+          height: 250,
+          right: "15%",
+          top: "60%",
+          background: "radial-gradient(circle, hsl(260, 60%, 50%) 0%, transparent 70%)",
+          opacity: 0.03,
+        }}
+        animate={{
+          x: [0, -50, 40, 0],
+          y: [0, 30, -50, 0],
+          scale: [1, 0.85, 1.15, 1],
+        }}
+        transition={{ duration: 40, repeat: Infinity, ease: "easeInOut", delay: -10 }}
+      />
+    </div>
+  );
+};
+
+export default FloatingParticles;

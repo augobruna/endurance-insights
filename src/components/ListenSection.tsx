@@ -5,15 +5,15 @@ import { Button } from "@/components/ui/button";
 const platforms = [
   {
     name: "Spotify",
-    url: "https://open.spotify.com/show/4wMFo25lNcsgjqfMon1oBS",
+    url: "https://open.spotify.com/show/4JR5cvFpYmuvaQxbx2D9nb?si=48af90b3b0cc4b2f",
   },
   {
     name: "Apple Podcasts",
-    url: "https://podcasts.apple.com/us/podcast/human-endurance-podcast/id1744327876",
+    url: "https://podcasts.apple.com/us/podcast/human-endurance/id1729061731",
   },
   {
     name: "YouTube",
-    url: "https://www.youtube.com/@humanendurancepodcast",
+    url: "https://www.youtube.com/@HumanEndurance",
   },
 ];
 

@@ -10,7 +10,7 @@ const StorySection = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <p className="uppercase tracking-[0.3em] text-sm font-medium mb-4 gradient-text">
+          <p className="uppercase tracking-[0.3em] text-sm font-medium mb-4 text-primary">
             Our Story
           </p>
           <h2 className="text-5xl md:text-6xl">
@@ -45,7 +45,7 @@ const StorySection = () => {
             transition={{ delay: 0.2 }}
             className="text-muted-foreground font-light leading-relaxed text-lg text-center"
           >
-            Their mission remains at the heart of everything they do: <span className="gradient-text font-medium">share knowledge with the endurance community</span> and make the sport more accessible to everyone.
+            Their mission remains at the heart of everything they do: <span className="text-primary font-medium">share knowledge with the endurance community</span> and make the sport more accessible to everyone.
           </motion.p>
         </div>
       </div>

@@ -25,7 +25,7 @@ const StorySection = () => {
             viewport={{ once: true }}
             className="text-muted-foreground font-light leading-relaxed text-lg text-center"
           >
-            Bruna and Fabi are a married couple united by their love for endurance sports — Bruna as a runner, Fabi as a triathlete. In early 2024, they launched the Human Endurance Podcast driven by a simple idea: meet more people in the space and share the incredible stories of everyday athletes, not just professionals.
+            When Bruna & Fabi launched the show in early 2024, the married couple had a simple goal: talk about what they loved, meet fascinating people, and fill a gap they saw in the endurance world.
           </motion.p>
 
           <motion.p
@@ -35,7 +35,7 @@ const StorySection = () => {
             transition={{ delay: 0.1 }}
             className="text-muted-foreground font-light leading-relaxed text-lg text-center"
           >
-            What started as conversations with inspiring guests has grown into two dedicated series. The <span className="text-foreground font-medium">Guest Series</span> continues to spotlight athletes with remarkable stories, while the <span className="text-foreground font-medium">Expert Series</span> brings in specialists from fields like sports science, nutrition, and coaching to go deeper into the "how" behind endurance performance.
+            Most endurance content celebrates elites. But what about the full-time lawyer training for her first 100-miler? The parent balancing early morning runs with school drop-offs while chasing a Boston qualifier? These are the stories that fascinated Bruna and Fabi — athletes proving that incredible feats don't require sponsorships or endless free time, just determination, smart training, and consistency.
           </motion.p>
 
           <motion.p
@@ -45,7 +45,17 @@ const StorySection = () => {
             transition={{ delay: 0.2 }}
             className="text-muted-foreground font-light leading-relaxed text-lg text-center"
           >
-            Their mission remains at the heart of everything they do: <span className="text-primary font-medium">share knowledge with the endurance community</span> and make the sport more accessible to everyone.
+            What started as conversations with inspiring everyday athletes has evolved into two series. The <span className="text-foreground font-medium">Guest Series</span> continues to spotlight remarkable athletes and their stories, while the <span className="text-foreground font-medium">Expert Series</span> brings in specialists from sports science, nutrition, and coaching to go deeper into the "how" — practical knowledge to help you actually improve.
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3 }}
+            className="text-muted-foreground font-light leading-relaxed text-lg text-center"
+          >
+            At the heart of it all: <span className="text-primary font-medium">lowering the barrier to entry</span>. Fabi herself once believed you had to be a lifelong athlete to do endurance sports. The podcast exists to prove that wrong — to show that with the right approach, what looks impossible from the outside is absolutely within reach.
           </motion.p>
         </div>
       </div>

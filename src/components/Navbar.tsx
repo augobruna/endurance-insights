@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
+import logo from "@/assets/logo.png";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -13,13 +14,16 @@ const Navbar = () => {
   return (
     <nav
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-500 px-6 py-4",
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-500 px-6 py-3",
         scrolled ? "bg-background/80 backdrop-blur-lg border-b border-border" : "bg-transparent"
       )}
     >
       <div className="max-w-6xl mx-auto flex items-center justify-between">
-        <a href="#" className="text-2xl font-bold" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
-          Human <span className="text-primary">Endurance</span>
+        <a href="#" className="flex items-center gap-3">
+          <img src={logo} alt="Human Endurance Podcast logo" className="h-10 w-auto" />
+          <span className="text-xl font-bold hidden sm:inline" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+            Human <span className="gradient-text">Endurance</span>
+          </span>
         </a>
         <div className="hidden md:flex items-center gap-8">
           {["Séries", "Hosts", "Ouvir"].map((item) => (

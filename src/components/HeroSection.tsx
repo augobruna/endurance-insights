@@ -7,7 +7,7 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div
-        className="absolute inset-0 bg-cover bg-center"
+        className="absolute inset-0 bg-cover bg-center opacity-40"
         style={{ backgroundImage: `url(${heroBg})` }}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background" />
@@ -17,7 +17,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-primary uppercase tracking-[0.3em] text-sm font-medium mb-6"
+          className="uppercase tracking-[0.3em] text-sm font-medium mb-6 gradient-text"
         >
           Podcast
         </motion.p>
@@ -30,7 +30,7 @@ const HeroSection = () => {
         >
           Human
           <br />
-          <span className="text-primary">Endurance</span>
+          <span className="gradient-text">Endurance</span>
         </motion.h1>
 
         <motion.p
@@ -50,7 +50,7 @@ const HeroSection = () => {
         >
           <Button
             size="lg"
-            className="text-lg px-8 py-6 rounded-full gap-3"
+            className="text-lg px-8 py-6 rounded-full gap-3 gradient-bg border-0 text-primary-foreground hover:opacity-90"
             asChild
           >
             <a href="https://open.spotify.com/show/4wMFo25lNcsgjqfMon1oBS" target="_blank" rel="noopener noreferrer">

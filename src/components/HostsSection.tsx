@@ -42,7 +42,7 @@ const HostsSection = () => {
 
         <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
           {hosts.map((host, i) => (
-            <motion.div
+            <motion.article
               key={host.name}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -52,7 +52,7 @@ const HostsSection = () => {
             >
               <div className="relative w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden p-[2px] gradient-bg">
                 <div className="w-full h-full rounded-full overflow-hidden bg-card flex items-center justify-center">
-                  <img src={host.image} alt={host.name} className="w-full h-full object-cover" />
+                  <img src={host.image} alt={`${host.name} — Host of Human Endurance Podcast`} loading="lazy" className="w-full h-full object-cover" />
                 </div>
               </div>
               <h3 className="text-3xl mb-1">{host.name}</h3>
@@ -72,7 +72,7 @@ const HostsSection = () => {
                 <Instagram className="h-4 w-4" />
                 {host.instagramHandle}
               </a>
-            </motion.div>
+            </motion.article>
           ))}
         </div>
       </div>

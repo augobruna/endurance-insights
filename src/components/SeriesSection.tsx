@@ -38,7 +38,7 @@ const SeriesSection = () => {
 
         <div className="grid md:grid-cols-2 gap-8">
           {series.map((s, i) => (
-            <motion.div
+            <motion.article
               key={s.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -56,7 +56,7 @@ const SeriesSection = () => {
                   {s.description}
                 </p>
               </div>
-            </motion.div>
+            </motion.article>
           ))}
         </div>
       </div>

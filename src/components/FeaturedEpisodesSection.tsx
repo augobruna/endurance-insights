@@ -69,7 +69,7 @@ const FeaturedEpisodesSection = () => {
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 loading="lazy"
                 className="rounded-xl"
-                title={`Episode ${i + 1}`}
+                title={`Human Endurance Podcast — Featured Episode ${i + 1}`}
               />
             </motion.div>
           ))}

@@ -45,7 +45,7 @@ const StorySection = () => {
             transition={{ delay: 0.2 }}
             className="text-muted-foreground font-light leading-relaxed text-lg text-center"
           >
-            What started as conversations with inspiring everyday athletes has evolved into two series. The <span className="text-foreground font-medium">Guest Series</span> continues to spotlight remarkable athletes and their stories, while the <span className="text-foreground font-medium">Expert Series</span> brings in specialists from sports science, nutrition, and coaching to go deeper into the "how" — practical knowledge to help you actually improve.
+            What started as conversations with inspiring everyday athletes has evolved into two series. The Guest Series continues to spotlight remarkable athletes and their stories, while the Expert Series brings in specialists from sports science, nutrition, and coaching to go deeper into the "how" — practical knowledge to help you actually improve.
           </motion.p>
 
           <motion.p
@@ -55,7 +55,7 @@ const StorySection = () => {
             transition={{ delay: 0.3 }}
             className="text-muted-foreground font-light leading-relaxed text-lg text-center"
           >
-            At the heart of it all: <span className="text-primary font-medium">lowering the barrier to entry</span>. Fabi herself once believed you had to be a lifelong athlete to do endurance sports. The podcast exists to prove that wrong — to show that with the right approach, what looks impossible from the outside is absolutely within reach.
+            At the heart of it all: lowering the barrier to entry. Fabi herself once believed you had to be a lifelong athlete to do endurance sports. The podcast exists to prove that wrong — to show that with the right approach, what looks impossible from the outside is absolutely within reach.
           </motion.p>
         </div>
       </div>

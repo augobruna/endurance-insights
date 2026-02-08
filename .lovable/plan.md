@@ -1,27 +1,34 @@
 
 
-## Three Changes to the Landing Page
+## Add Featured Episodes Section with Spotify Embeds
 
-### 1. Uniform background for Hosts section
-The "Meet Your Hosts" section has `bg-card/50` making it lighter than the rest. Remove this so all sections share the same dark background.
+Create a new "Featured Episodes" section displaying 3 curated Spotify episode embeds, placed between the Series and Hosts sections.
 
-**File:** `src/components/HostsSection.tsx`
-- Change `className="py-28 px-6 bg-card/50"` to `className="py-28 px-6"`
+### New File: `src/components/FeaturedEpisodesSection.tsx`
 
-### 2. Add gradient divider lines between all sections
-The thin gradient line at the bottom of the Hero section (a 1px-wide, 16px-tall gradient from pink to transparent) is a nice visual separator. Add the same divider between every section by creating a small reusable `SectionDivider` component and placing it between each section in `Index.tsx`.
+A new section component containing:
+- Section header with "Featured Episodes" title, a subtitle tag, and descriptive text (matching the style of SeriesSection)
+- 3 Spotify episode embeds using iframes with the dark theme (`?theme=0`)
+- Each embed uses the compact player (152px height) which fits the site aesthetic
+- Framer Motion fade-in animations consistent with other sections
+- Responsive layout: stacked vertically on mobile, side by side on larger screens (grid with 1 column on mobile, 3 on desktop)
+- Episode data stored as a simple array of objects with `title`, `episodeId`, and `description`
 
-**New file:** `src/components/SectionDivider.tsx`
-- A centered vertical gradient line (same style as the Hero one: `w-px h-16 bg-gradient-to-b from-primary/60 to-transparent`)
+The Spotify embed URL format: `https://open.spotify.com/embed/episode/{EPISODE_ID}?utm_source=generator&theme=0`
 
-**File:** `src/pages/Index.tsx`
-- Insert `<SectionDivider />` between each section pair: Story/Series, Series/Hosts, Hosts/Listen
+We'll use 3 episode IDs pulled from the show's Spotify page (show ID: `4JR5cvFpYmuvaQxbx2D9nb`). The episodes will be hardcoded -- no API key or backend needed, just simple iframes.
 
-The existing line at the bottom of HeroSection stays as-is (it has its own fade-in animation tied to the hero).
+### Updated File: `src/pages/Index.tsx`
 
-### 3. Make particles visible in the Hero section
-The particles render behind the hero but the hero has an opaque gradient overlay (`bg-gradient-to-b from-card via-background to-background`) that covers them completely. Fix by making the hero background semi-transparent so particles show through.
+- Import the new `FeaturedEpisodesSection` component
+- Place it between `SeriesSection` and `HostsSection`, with `SectionDivider` components on either side
 
-**File:** `src/components/HeroSection.tsx`
-- Change the overlay from `from-card via-background to-background` to `from-card/80 via-background/90 to-background` so the particles are subtly visible behind the hero text
+The updated section order will be:
+1. Hero
+2. Our Story
+3. Series (Science and Stories)
+4. **Featured Episodes (new)**
+5. Meet Your Hosts
+6. Where to Listen
+7. Footer
 

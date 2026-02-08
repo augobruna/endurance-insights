@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import StorySection from "@/components/StorySection";
 import SeriesSection from "@/components/SeriesSection";
+import FeaturedEpisodesSection from "@/components/FeaturedEpisodesSection";
 import HostsSection from "@/components/HostsSection";
 import ListenSection from "@/components/ListenSection";
 import Footer from "@/components/Footer";
@@ -17,6 +18,8 @@ const Index = () => {
       <StorySection />
       <SectionDivider />
       <SeriesSection />
+      <SectionDivider />
+      <FeaturedEpisodesSection />
       <SectionDivider />
       <HostsSection />
       <SectionDivider />

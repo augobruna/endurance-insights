@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Instagram } from "lucide-react";
 import hostFabi from "@/assets/host-fabi.jpg";
 import hostBruna from "@/assets/host-bruna.jpg";
 
@@ -9,6 +10,8 @@ const hosts = [
     roleText: "Runner · Coach · Co-founder of",
     bio: "Bruna has been an athlete her whole life. She played tennis competitively throughout her childhood and teenage years, which earned her a spot at Emory University in Atlanta. There, she made a bold switch — going from NCAA tennis to running track and cross-country — and fell in love with running ever since.\n\nWith over 10 years of marathon experience and coaching runners since 2021, the marathon remains her favorite distance. Her passion for endurance sports runs so deep that she left her corporate job to co-found augo, setting a new standard for endurance sports coaching.",
     image: hostBruna,
+    instagram: "https://www.instagram.com/justbrunathings/",
+    instagramHandle: "@justbrunathings",
   },
   {
     name: "Fabi",
@@ -16,6 +19,8 @@ const hosts = [
     roleText: "Triathlete · Coach · Co-founder of",
     bio: "Fabienne discovered triathlon in her late 20s, and within 3 years, she went from not being able to swim 25 meters to completing a half-distance triathlon and her first full-distance triathlon.\n\nShe has been coaching triathlete beginners since 2023, helping them get started in the sport and successfully cross the finish line. Together with Bruna, she decided to start augo to work in an industry she truly loves.",
     image: hostFabi,
+    instagram: "https://www.instagram.com/endurance_fabi/",
+    instagramHandle: "@endurance_fabi",
   },
 ];
 
@@ -60,6 +65,15 @@ const HostsSection = () => {
               <p className="text-muted-foreground font-light leading-relaxed whitespace-pre-line">
                 {host.bio}
               </p>
+              <a
+                href={host.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 mt-4 text-sm text-muted-foreground hover:text-primary transition-colors"
+              >
+                <Instagram className="h-4 w-4" />
+                {host.instagramHandle}
+              </a>
             </motion.div>
           ))}
         </div>

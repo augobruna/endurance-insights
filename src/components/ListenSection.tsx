@@ -49,7 +49,7 @@ const ListenSection = () => {
               key={p.name}
               variant="outline"
               size="lg"
-              className="text-base px-8 py-6 rounded-full border-muted-foreground/30 hover:border-primary hover:text-primary transition-all duration-300"
+              className="text-base font-medium px-8 py-6 rounded-full border-foreground/40 text-foreground hover:border-primary hover:text-primary hover:bg-primary/10 transition-all duration-300"
               asChild
             >
               <a href={p.url} target="_blank" rel="noopener noreferrer">

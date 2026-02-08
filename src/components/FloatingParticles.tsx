@@ -68,7 +68,7 @@ const FloatingParticles = () => {
           height: 400,
           left: "10%",
           top: "20%",
-          background: "radial-gradient(circle, hsl(330, 85%, 60%) 0%, transparent 70%)",
+          background: "radial-gradient(circle, hsl(45, 95%, 55%) 0%, transparent 70%)",
           opacity: 0.1,
         }}
         animate={{
@@ -85,7 +85,7 @@ const FloatingParticles = () => {
           height: 350,
           right: "15%",
           top: "60%",
-          background: "radial-gradient(circle, hsl(260, 60%, 50%) 0%, transparent 70%)",
+          background: "radial-gradient(circle, hsl(35, 90%, 55%) 0%, transparent 70%)",
           opacity: 0.08,
         }}
         animate={{

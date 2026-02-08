@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-card/80 via-background/90 to-background" />
+      <div className="absolute inset-0 bg-gradient-to-b from-card/60 via-background/70 to-background/80" />
 
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
         <motion.p

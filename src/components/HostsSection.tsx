@@ -6,18 +6,16 @@ import hostBruna from "@/assets/host-bruna.jpg";
 const hosts = [
   {
     name: "Bruna",
-    roleJsx: true,
     roleText: "Runner · Coach · Co-founder of",
-    bio: "Bruna has been an athlete her whole life. She played tennis competitively throughout her childhood and teenage years, which earned her a spot at Emory University in Atlanta. There, she made a bold switch — going from NCAA tennis to running track and cross-country — and fell in love with running ever since.\n\nWith over 10 years of marathon experience and coaching runners since 2021, the marathon remains her favorite distance. Her passion for endurance sports runs so deep that she left her corporate job to co-found augo, setting a new standard for endurance sports coaching.",
+    bio: "I've been an athlete my whole life — tennis through my teens, then NCAA track and cross country at Emory University, where I fell completely in love with running. For me, running is where I find peace, where I'm just with myself, where I recharge. There's truly no feeling better than running a really great marathon.\n\nI started coaching in 2021 because I wanted to share what running has given me: structure, determination, mental clarity, and a sense of what's possible. I love watching people have breakthroughs — seeing someone who never thought they could run a 5K cross a marathon finish line, or an experienced runner finally crack a goal they've been chasing for years.\n\nI also bring a very personal perspective to conversations about injuries and overtraining. After struggling with injuries for three years, I was diagnosed with RED-S (Relative Energy Deficiency in Sport). It completely changed how I approach training, recovery, and coaching. It's something I'm passionate about discussing openly because too many athletes, especially women, are dealing with this without knowing it.",
     image: hostBruna,
     instagram: "https://www.instagram.com/justbrunathings/",
     instagramHandle: "@justbrunathings",
   },
   {
     name: "Fabi",
-    roleJsx: true,
     roleText: "Triathlete · Coach · Co-founder of",
-    bio: "Fabienne discovered triathlon in her late 20s, and within 3 years, she went from not being able to swim 25 meters to completing a half-distance triathlon and her first full-distance triathlon.\n\nShe has been coaching triathlete beginners since 2023, helping them get started in the sport and successfully cross the finish line. Together with Bruna, she decided to start augo to work in an industry she truly loves.",
+    bio: "I discovered triathlon in my late 20s, and honestly, I didn't think it was for me. I believed you had to be a lifelong athlete to do endurance sports — that if you didn't grow up swimming and biking, you'd missed your window. I'm so glad I proved myself wrong.\n\nWithin three years of learning to swim, I went from barely making it 25 meters to completing my first half-distance triathlon, then my first full Ironman. That race was the moment I realized: I actually am an endurance athlete. What I love most about triathlon is feeling the progress — seeing tangible proof that consistency and structure pay off.\n\nNow I coach beginner triathletes, helping them get started in the sport and cross their first finish lines. I'm drawn to the dedication it takes, the discipline of showing up, and the belief in yourself when the training gets hard. On the podcast, I love exploring that mindset side — how we push through doubt, how we trust the process, and how we redefine what we thought was possible.",
     image: hostFabi,
     instagram: "https://www.instagram.com/endurance_fabi/",
     instagramHandle: "@endurance_fabi",

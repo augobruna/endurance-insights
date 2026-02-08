@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const StorySection = () => {
   return (
-    <section id="story" className="py-28 px-6">
+    <article id="story" className="py-28 px-6">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -59,7 +59,7 @@ const StorySection = () => {
           </motion.p>
         </div>
       </div>
-    </section>
+    </article>
   );
 };
 

@@ -48,7 +48,7 @@ const HeroSection = () => {
             className="text-lg px-8 py-6 rounded-full gap-3 gradient-bg border-0 text-primary-foreground hover:opacity-90"
             asChild
           >
-            <a href="https://open.spotify.com/show/4wMFo25lNcsgjqfMon1oBS" target="_blank" rel="noopener noreferrer">
+            <a href="https://open.spotify.com/show/4JR5cvFpYmuvaQxbx2D9nb?si=48af90b3b0cc4b2f" target="_blank" rel="noopener noreferrer">
               <Play className="h-5 w-5" />
               Listen Now
             </a>

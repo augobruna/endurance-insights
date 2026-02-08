@@ -21,9 +21,6 @@ const Navbar = () => {
       <div className="max-w-6xl mx-auto flex items-center justify-between">
         <a href="#" className="flex items-center gap-3">
           <img src={logo} alt="Human Endurance Podcast logo" className="h-10 w-auto" />
-          <span className="text-xl font-bold hidden sm:inline" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
-            Human <span className="gradient-text">Endurance</span>
-          </span>
         </a>
         <div className="hidden md:flex items-center gap-8">
           {["Series", "Hosts", "Listen"].map((item) => (

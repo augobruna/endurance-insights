@@ -12,7 +12,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="uppercase tracking-[0.3em] text-sm font-medium mb-6 gradient-text"
+          className="uppercase tracking-[0.3em] text-sm font-medium mb-6 text-primary"
         >
           Podcast
         </motion.p>
@@ -25,7 +25,7 @@ const HeroSection = () => {
         >
           Human
           <br />
-          <span className="gradient-text">Endurance</span>
+          <span className="text-primary">Endurance</span>
         </motion.h1>
 
         <motion.p

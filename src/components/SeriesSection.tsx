@@ -28,7 +28,7 @@ const SeriesSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <p className="uppercase tracking-[0.3em] text-sm font-medium mb-4 gradient-text">
+          <p className="uppercase tracking-[0.3em] text-sm font-medium mb-4 text-primary">
             Two Series
           </p>
           <h2 className="text-5xl md:text-6xl">

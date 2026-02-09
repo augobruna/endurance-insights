@@ -12,10 +12,10 @@ interface Particle {
 }
 
 const colors = [
-  "hsl(330, 85%, 60%)",   // primary pink
-  "hsl(260, 60%, 50%)",   // secondary purple
-  "hsl(30, 90%, 55%)",    // accent orange
-  "hsl(210, 90%, 50%)",   // blue
+  "hsl(348, 91%, 59%)",   // brand pink
+  "hsl(207, 100%, 33%)",  // brand blue
+  "hsl(37, 100%, 50%)",   // brand orange
+  "hsl(24, 76%, 91%)",    // brand cream
 ];
 
 const FloatingParticles = () => {
@@ -68,7 +68,7 @@ const FloatingParticles = () => {
           height: 400,
           left: "10%",
           top: "20%",
-          background: "radial-gradient(circle, hsl(45, 95%, 55%) 0%, transparent 70%)",
+          background: "radial-gradient(circle, hsl(348, 91%, 59%) 0%, transparent 70%)",
           opacity: 0.1,
         }}
         animate={{
@@ -85,7 +85,7 @@ const FloatingParticles = () => {
           height: 350,
           right: "15%",
           top: "60%",
-          background: "radial-gradient(circle, hsl(35, 90%, 55%) 0%, transparent 70%)",
+          background: "radial-gradient(circle, hsl(207, 100%, 33%) 0%, transparent 70%)",
           opacity: 0.08,
         }}
         animate={{

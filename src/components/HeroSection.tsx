@@ -45,7 +45,8 @@ const HeroSection = () => {
         >
           <Button
             size="lg"
-            className="text-lg px-8 py-6 rounded-full gap-3 gradient-bg border-0 text-primary-foreground hover:opacity-90"
+            className="text-lg px-8 py-6 rounded-full gap-3 border-0 text-white hover:opacity-90"
+            style={{ background: "linear-gradient(135deg, #f53861, #0060a6)" }}
             asChild
           >
             <a href="https://open.spotify.com/show/4JR5cvFpYmuvaQxbx2D9nb?si=48af90b3b0cc4b2f" target="_blank" rel="noopener noreferrer">

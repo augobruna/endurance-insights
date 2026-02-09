@@ -1,34 +1,26 @@
 
 
-## Rebrand: Pink/Blue Accent Colors with Gradient Button
+## Update Blog Section with Real Substack Post Summaries
 
-Update the entire color palette from the current yellow/golden-orange theme to the official brand colors: pink (#f53861), blue (#0060a6), orange (#ff9c00), cream (#f8e6d6), and black (#000000). The "Listen Now" button gets a standout pink-to-blue gradient.
+Replace the three placeholder articles in `src/components/BlogSection.tsx` with the real Substack posts and their summaries.
 
-### What changes
+### Content Updates
 
-**1. CSS Variables (src/index.css)**
-- `--primary`: change from golden yellow to pink (#f53861 -> approx HSL 348 91% 59%)
-- `--secondary`: change from golden-orange to blue (#0060a6 -> approx HSL 207 100% 33%)
-- `--accent`: change from bright yellow to orange (#ff9c00 -> approx HSL 37 100% 50%)
-- `--ring`: update to match new primary (pink)
-- `--sidebar-primary` and `--sidebar-ring`: update to match
-- Update `.gradient-text`, `.gradient-border`, `.gradient-bg` utility classes to use pink-to-blue gradient instead of yellow-to-orange
+**Article 1 -- Coaching Elite Triathletes with Reto Braendli**
+- Title: "Learnings from Coaching Elite Triathletes — with Reto Braendli"
+- Summary: Swiss coach Reto Braendli reveals what it takes at the highest level: understanding the person behind the athlete, building foundations over years, and why current fueling trends might be missing the point.
+- URL: https://justbrunathings.substack.com/p/human-endurance-podcast-learnings
 
-**2. Floating Particles (src/components/FloatingParticles.tsx)**
-- Update the `colors` array to use the new brand palette (pink, blue, orange, cream)
-- Update the two gradient orbs from golden hues to pink and blue
+**Article 2 -- From Medical Student to World Champion: Samuel Studer**
+- Title: "From Medical Student to IRONMAN 70.3 World Champion — Samuel Studer"
+- Summary: How Samuel Studer balanced 20+ hours of weekly training with medical school, survived a chaotic race day in Marbella, and proved that priorities — not time — determine what's possible.
+- URL: https://justbrunathings.substack.com/p/human-endurance-podcast-from-medical
 
-**3. Hero "Listen Now" button (src/components/HeroSection.tsx)**
-- Replace `gradient-bg` class with an inline or custom gradient style going from pink (#f53861) through blue (#0060a6) for a standout effect
+**Article 3 -- Lessons from Coach Joserra: 31 Ironmans, 25 Years of Coaching**
+- Title: "Lessons from 31 Ironmans and 25 Years of Coaching — Coach Joserra"
+- Summary: Coach Joserra's philosophy isn't about training zones — it's about presence, health over performance, and genuine communication. A masterclass in longevity for endurance athletes.
+- URL: https://justbrunathings.substack.com/p/human-endurance-podcat-lessons-from
 
-**4. Section Divider (src/components/SectionDivider.tsx)**
-- Automatically picks up new `primary` color, no code changes needed
-
-**5. All other components** (HostsSection, SeriesSection, StorySection, ListenSection, FeaturedEpisodesSection, Footer, Navbar)
-- These use `text-primary`, `hover:text-primary`, `border-primary` etc. which automatically update via the CSS variable change -- no code edits needed
-
-### Files to edit
-- `src/index.css` -- CSS variables and gradient utilities
-- `src/components/FloatingParticles.tsx` -- particle and orb colors
-- `src/components/HeroSection.tsx` -- Listen Now button gradient
+### File to edit
+- `src/components/BlogSection.tsx` -- replace the `articles` array (lines 4-23) with real titles, descriptions, and URLs
 

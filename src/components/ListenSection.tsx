@@ -19,7 +19,7 @@ const platforms = [
 
 const ListenSection = () => {
   return (
-    <section id="listen" className="py-28 px-6">
+    <section id="listen" className="py-28 px-6" aria-label="Where to listen">
       <div className="max-w-3xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

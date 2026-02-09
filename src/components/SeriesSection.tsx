@@ -17,7 +17,7 @@ const series = [
 
 const SeriesSection = () => {
   return (
-    <section id="series" className="py-28 px-6">
+    <section id="series" className="py-28 px-6" aria-label="Podcast series overview">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

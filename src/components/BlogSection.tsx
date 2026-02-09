@@ -3,22 +3,22 @@ import { ArrowUpRight, BookOpen } from "lucide-react";
 
 const articles = [
   {
-    title: "The Science of Pacing: Why Most Endurance Athletes Get It Wrong",
+    title: "Learnings from Coaching Elite Triathletes — with Reto Braendli",
     description:
-      "A deep dive into how smart pacing strategies separate finishers from DNFs — and how to dial in yours.",
-    url: "https://justbrunathings.substack.com/",
+      "Swiss coach Reto Braendli reveals what it takes at the highest level: understanding the person behind the athlete, building foundations over years, and why current fueling trends might be missing the point.",
+    url: "https://justbrunathings.substack.com/p/human-endurance-podcast-learnings",
   },
   {
-    title: "Fueling for the Long Run: Nutrition Mistakes You're Probably Making",
+    title: "From Medical Student to IRONMAN 70.3 World Champion — Samuel Studer",
     description:
-      "From carb timing to hydration myths, practical tips backed by sports science to keep you moving stronger, longer.",
-    url: "https://justbrunathings.substack.com/",
+      "How Samuel Studer balanced 20+ hours of weekly training with medical school, survived a chaotic race day in Marbella, and proved that priorities — not time — determine what's possible.",
+    url: "https://justbrunathings.substack.com/p/human-endurance-podcast-from-medical",
   },
   {
-    title: "Training Through Life: How Everyday Athletes Build Consistency",
+    title: "Lessons from 31 Ironmans and 25 Years of Coaching — Coach Joserra",
     description:
-      "Balancing jobs, families, and big goals. Real strategies from real people who make endurance work alongside everything else.",
-    url: "https://justbrunathings.substack.com/",
+      "Coach Joserra's philosophy isn't about training zones — it's about presence, health over performance, and genuine communication. A masterclass in longevity for endurance athletes.",
+    url: "https://justbrunathings.substack.com/p/human-endurance-podcat-lessons-from",
   },
 ];
 

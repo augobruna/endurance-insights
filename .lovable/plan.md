@@ -1,26 +1,51 @@
 
 
-## Update Blog Section with Real Substack Post Summaries
+## SEO Improvements Implementation Plan
 
-Replace the three placeholder articles in `src/components/BlogSection.tsx` with the real Substack posts and their summaries.
+Based on the audit, here are the improvements to implement:
 
-### Content Updates
+### 1. Enhanced Meta Tags (index.html)
 
-**Article 1 -- Coaching Elite Triathletes with Reto Braendli**
-- Title: "Learnings from Coaching Elite Triathletes — with Reto Braendli"
-- Summary: Swiss coach Reto Braendli reveals what it takes at the highest level: understanding the person behind the athlete, building foundations over years, and why current fueling trends might be missing the point.
-- URL: https://justbrunathings.substack.com/p/human-endurance-podcast-learnings
+Add missing Open Graph image dimensions and Twitter creator handles:
+- `og:image:width` (1200) and `og:image:height` (630)
+- `twitter:creator` handle for the podcast
 
-**Article 2 -- From Medical Student to World Champion: Samuel Studer**
-- Title: "From Medical Student to IRONMAN 70.3 World Champion — Samuel Studer"
-- Summary: How Samuel Studer balanced 20+ hours of weekly training with medical school, survived a chaotic race day in Marbella, and proved that priorities — not time — determine what's possible.
-- URL: https://justbrunathings.substack.com/p/human-endurance-podcast-from-medical
+### 2. Performance: Preconnect Hints (index.html)
 
-**Article 3 -- Lessons from Coach Joserra: 31 Ironmans, 25 Years of Coaching**
-- Title: "Lessons from 31 Ironmans and 25 Years of Coaching — Coach Joserra"
-- Summary: Coach Joserra's philosophy isn't about training zones — it's about presence, health over performance, and genuine communication. A masterclass in longevity for endurance athletes.
-- URL: https://justbrunathings.substack.com/p/human-endurance-podcat-lessons-from
+Add resource hints for faster loading of external resources:
+- Preconnect to Spotify embed domain (`open.spotify.com`)
+- DNS-prefetch as fallback for older browsers
 
-### File to edit
-- `src/components/BlogSection.tsx` -- replace the `articles` array (lines 4-23) with real titles, descriptions, and URLs
+### 3. Accessibility: Section Aria Labels
+
+Add `aria-label` attributes to sections currently missing them:
+- `SeriesSection.tsx` - "Podcast series overview"
+- `FeaturedEpisodesSection.tsx` - "Featured episodes"
+- `StorySection.tsx` - "Our story"
+- `ListenSection.tsx` - "Where to listen"
+- `BlogSection.tsx` - "Blog articles"
+
+### 4. Episode Metadata for Accessibility (FeaturedEpisodesSection.tsx)
+
+Replace empty episode titles with descriptive ones for screen readers:
+- Add meaningful titles to each Spotify iframe `title` attribute
+- Example: "Human Endurance Podcast — Episode with Reto Braendli"
+
+### 5. 404 Page SEO (NotFound.tsx)
+
+Add a document title update for the 404 page so search engines and users see a proper page title.
+
+---
+
+### Files to Edit
+
+| File | Changes |
+|------|---------|
+| `index.html` | Add og:image dimensions, twitter:creator, preconnect hints |
+| `src/components/SeriesSection.tsx` | Add aria-label to section |
+| `src/components/FeaturedEpisodesSection.tsx` | Add aria-label, update episode titles |
+| `src/components/StorySection.tsx` | Add aria-label to section |
+| `src/components/ListenSection.tsx` | Add aria-label to section |
+| `src/components/BlogSection.tsx` | Add aria-label to section |
+| `src/pages/NotFound.tsx` | Add useEffect to set document.title |
 

@@ -24,10 +24,12 @@ const Navbar = () => {
           <img src={logo} alt="Human Endurance Podcast logo" className="h-10 w-auto" />
         </a>
         <div className="hidden md:flex items-center gap-8">
-          {["Series", "Hosts", "Listen"].map((item) => (
+          {["Series", "Hosts", "Blog", "Listen"].map((item) => (
             <a
               key={item}
-              href={`#${item.toLowerCase()}`}
+              href={item === "Blog" ? "https://justbrunathings.substack.com/" : `#${item.toLowerCase()}`}
+              target={item === "Blog" ? "_blank" : undefined}
+              rel={item === "Blog" ? "noopener noreferrer" : undefined}
               className="text-sm text-muted-foreground hover:text-primary transition-colors uppercase tracking-widest"
             >
               {item}

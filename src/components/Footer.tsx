@@ -9,6 +9,7 @@ const Footer = () => {
           <a href="https://open.spotify.com/show/4JR5cvFpYmuvaQxbx2D9nb?si=48af90b3b0cc4b2f" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-primary transition-colors">Spotify</a>
           <a href="https://podcasts.apple.com/us/podcast/human-endurance/id1729061731" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-primary transition-colors">Apple Podcasts</a>
           <a href="https://www.youtube.com/@HumanEndurance" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-primary transition-colors">YouTube</a>
+          <a href="https://justbrunathings.substack.com/" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-primary transition-colors">Blog</a>
         </div>
       </div>
     </footer>

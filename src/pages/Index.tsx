@@ -4,6 +4,7 @@ import StorySection from "@/components/StorySection";
 import SeriesSection from "@/components/SeriesSection";
 import FeaturedEpisodesSection from "@/components/FeaturedEpisodesSection";
 import HostsSection from "@/components/HostsSection";
+import BlogSection from "@/components/BlogSection";
 import ListenSection from "@/components/ListenSection";
 import Footer from "@/components/Footer";
 import FloatingParticles from "@/components/FloatingParticles";
@@ -23,6 +24,8 @@ const Index = () => {
       <SectionDivider />
       <HostsSection />
       <SectionDivider />
+      <BlogSection />
+      <SectionDivider />
       <ListenSection />
       <Footer />
 
@@ -35,8 +38,10 @@ const Index = () => {
           <h2>Guest Series</h2>
           <p>Real stories from everyday athletes doing extraordinary things. Full-time jobs, families, responsibilities — and still chasing ultras, ironmans, and personal bests.</p>
           <h2>Meet the Hosts</h2>
-          <p>Bruna — Runner, Coach, and Co-founder of Augo Training. NCAA track and cross country at Emory. Passionate about coaching and raising awareness about RED-S.</p>
-          <p>Fabi — Triathlete, Coach, and Co-founder of Augo Training. Discovered triathlon in her late 20s, went from barely swimming 25 meters to completing a full Ironman within three years.</p>
+          <p>Bruna — Runner, Coach, and Co-founder of Augo Training.</p>
+          <p>Fabi — Triathlete, Coach, and Co-founder of Augo Training.</p>
+          <h2>Endurance Sports Blog</h2>
+          <p>Read in-depth articles on endurance training, race reports, and coaching insights on the <a href="https://justbrunathings.substack.com/">Human Endurance Blog</a>.</p>
           <h2>Listen</h2>
           <ul>
             <li><a href="https://open.spotify.com/show/4JR5cvFpYmuvaQxbx2D9nb">Spotify</a></li>

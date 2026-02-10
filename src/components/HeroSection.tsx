@@ -11,7 +11,7 @@ const HeroSection = () => {
         alt="Bruna and Fabi recording the Human Endurance podcast"
         className="absolute inset-0 w-full h-full object-cover"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/70 to-background/90" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background" />
 
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
         <motion.p

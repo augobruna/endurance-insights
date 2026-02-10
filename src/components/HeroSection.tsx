@@ -1,11 +1,17 @@
 import { motion } from "framer-motion";
 import { Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import behindTheScenes from "@/assets/behind-the-scenes.jpg";
 
 const HeroSection = () => {
   return (
     <header className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-card/60 via-background/70 to-background/80" />
+      <img
+        src={behindTheScenes}
+        alt="Bruna and Fabi recording the Human Endurance podcast"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/70 to-background/90" />
 
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
         <motion.p

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import hostsOutdoor from "@/assets/hosts-outdoor.jpg";
 
 const StorySection = () => {
   return (
@@ -16,6 +17,19 @@ const StorySection = () => {
           <h2 className="text-5xl md:text-6xl">
             How It Started
           </h2>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20, rotate: 0 }}
+          whileInView={{ opacity: 1, y: 0, rotate: 1 }}
+          viewport={{ once: true }}
+          className="mb-16 flex justify-center"
+        >
+          <img
+            src={hostsOutdoor}
+            alt="Bruna and Fabi smiling outdoors by a lake"
+            className="rounded-2xl rotate-1 shadow-2xl max-w-2xl w-full"
+          />
         </motion.div>
 
         <div className="space-y-8">

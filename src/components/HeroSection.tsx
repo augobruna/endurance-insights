@@ -38,9 +38,9 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-10 font-light"
+          className="text-foreground text-lg md:text-xl max-w-2xl mx-auto mb-10 font-light"
         >
-          Redefining human boundaries through endurance sports.
+          Redefining human boundaries through endurance sports
         </motion.p>
 
         <motion.div

@@ -1,51 +1,25 @@
 
 
-## SEO Improvements Implementation Plan
+## Add Behind-the-Scenes Photo to Hero Section
 
-Based on the audit, here are the improvements to implement:
+### What We'll Do
 
-### 1. Enhanced Meta Tags (index.html)
+Place the uploaded recording photo as a background/hero image in the **HeroSection**, giving the landing page an immediate human, authentic feel instead of the current gradient-only background.
 
-Add missing Open Graph image dimensions and Twitter creator handles:
-- `og:image:width` (1200) and `og:image:height` (630)
-- `twitter:creator` handle for the podcast
+### Layout
 
-### 2. Performance: Preconnect Hints (index.html)
+The image will sit behind the existing hero content as a full-bleed background with a dark overlay to maintain text readability. The gradient overlay will blend the photo into the dark theme.
 
-Add resource hints for faster loading of external resources:
-- Preconnect to Spotify embed domain (`open.spotify.com`)
-- DNS-prefetch as fallback for older browsers
+### Technical Steps
 
-### 3. Accessibility: Section Aria Labels
+1. **Copy the image** from `user-uploads://IMG_1029.jpeg` to `src/assets/behind-the-scenes.jpg`
+2. **Update `HeroSection.tsx`**:
+   - Import the image
+   - Add an `<img>` element with `object-cover` filling the hero area, positioned absolutely behind the content
+   - Keep the existing gradient overlay on top of the image (adjusting opacity so the photo is visible but text remains legible)
+   - Add descriptive `alt` text for accessibility
 
-Add `aria-label` attributes to sections currently missing them:
-- `SeriesSection.tsx` - "Podcast series overview"
-- `FeaturedEpisodesSection.tsx` - "Featured episodes"
-- `StorySection.tsx` - "Our story"
-- `ListenSection.tsx` - "Where to listen"
-- `BlogSection.tsx` - "Blog articles"
+### Result
 
-### 4. Episode Metadata for Accessibility (FeaturedEpisodesSection.tsx)
-
-Replace empty episode titles with descriptive ones for screen readers:
-- Add meaningful titles to each Spotify iframe `title` attribute
-- Example: "Human Endurance Podcast — Episode with Reto Braendli"
-
-### 5. 404 Page SEO (NotFound.tsx)
-
-Add a document title update for the 404 page so search engines and users see a proper page title.
-
----
-
-### Files to Edit
-
-| File | Changes |
-|------|---------|
-| `index.html` | Add og:image dimensions, twitter:creator, preconnect hints |
-| `src/components/SeriesSection.tsx` | Add aria-label to section |
-| `src/components/FeaturedEpisodesSection.tsx` | Add aria-label, update episode titles |
-| `src/components/StorySection.tsx` | Add aria-label to section |
-| `src/components/ListenSection.tsx` | Add aria-label to section |
-| `src/components/BlogSection.tsx` | Add aria-label to section |
-| `src/pages/NotFound.tsx` | Add useEffect to set document.title |
+Visitors will land on a hero with a real photo of Bruna and Fabi recording, overlaid with the dark gradient and the existing headline/CTA -- immediately setting a warm, human tone.
 

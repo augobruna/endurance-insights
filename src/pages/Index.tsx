@@ -16,17 +16,17 @@ const Index = () => {
       <FloatingParticles />
       <Navbar />
       <HeroSection />
-      <StorySection />
+      <HostsSection />
+      <SectionDivider />
+      <ListenSection />
       <SectionDivider />
       <SeriesSection />
       <SectionDivider />
       <FeaturedEpisodesSection />
       <SectionDivider />
-      <HostsSection />
+      <StorySection />
       <SectionDivider />
       <BlogSection />
-      <SectionDivider />
-      <ListenSection />
       <Footer />
 
       <noscript>

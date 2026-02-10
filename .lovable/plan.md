@@ -1,25 +1,28 @@
 
 
-## Add Behind-the-Scenes Photo to Hero Section
+## Add Photo to "How It Started" Section
 
 ### What We'll Do
 
-Place the uploaded recording photo as a background/hero image in the **HeroSection**, giving the landing page an immediate human, authentic feel instead of the current gradient-only background.
+Add the beautiful outdoor photo of Bruna and Fabi to the **StorySection** ("How It Started"), placed between the heading and the story text. The image will feel natural and warm, matching the section's personal tone.
 
 ### Layout
 
-The image will sit behind the existing hero content as a full-bleed background with a dark overlay to maintain text readability. The gradient overlay will blend the photo into the dark theme.
+- Photo inserted after the "How It Started" heading, before the paragraphs
+- Displayed with rounded corners (`rounded-2xl`) and a slight rotation for a casual, scrapbook-like feel
+- Wrapped in a `motion.div` that animates in on scroll, consistent with the rest of the section
+- Soft shadow to give it depth against the dark background
 
 ### Technical Steps
 
-1. **Copy the image** from `user-uploads://IMG_1029.jpeg` to `src/assets/behind-the-scenes.jpg`
-2. **Update `HeroSection.tsx`**:
+1. **Copy the image** from `user-uploads://DSC05802.jpeg` to `src/assets/hosts-outdoor.jpg`
+2. **Update `StorySection.tsx`**:
    - Import the image
-   - Add an `<img>` element with `object-cover` filling the hero area, positioned absolutely behind the content
-   - Keep the existing gradient overlay on top of the image (adjusting opacity so the photo is visible but text remains legible)
-   - Add descriptive `alt` text for accessibility
+   - Add a `motion.div` container between the heading and the paragraphs
+   - Style the image with `rounded-2xl`, a subtle `rotate-1` tilt, `shadow-2xl`, and `max-w-2xl mx-auto`
+   - Add alt text: "Bruna and Fabi smiling outdoors by a lake"
 
 ### Result
 
-Visitors will land on a hero with a real photo of Bruna and Fabi recording, overlaid with the dark gradient and the existing headline/CTA -- immediately setting a warm, human tone.
+The "How It Started" section will open with the heading, then show a warm, slightly tilted photo of Bruna and Fabi laughing together outdoors, followed by the origin story text -- giving the section an authentic, personal feel.
 

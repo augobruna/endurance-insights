@@ -18,15 +18,15 @@ const Index = () => {
       <HeroSection />
       <HostsSection />
       <SectionDivider />
-      <ListenSection />
+      <FeaturedEpisodesSection />
       <SectionDivider />
       <SeriesSection />
-      <SectionDivider />
-      <FeaturedEpisodesSection />
       <SectionDivider />
       <StorySection />
       <SectionDivider />
       <BlogSection />
+      <SectionDivider />
+      <ListenSection />
       <Footer />
 
       <noscript>

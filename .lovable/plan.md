@@ -1,28 +1,49 @@
 
+## Switch to Light Pastel Cream Background
 
-## Add Photo to "How It Started" Section
+### What Changes
 
-### What We'll Do
+Transform the site from its current dark theme to a warm, light pastel cream background (#f8e6d6) while keeping all animations, layout, and content intact.
 
-Add the beautiful outdoor photo of Bruna and Fabi to the **StorySection** ("How It Started"), placed between the heading and the story text. The image will feel natural and warm, matching the section's personal tone.
+### Visual Changes
 
-### Layout
+- **Background**: Dark near-black becomes warm cream (#f8e6d6)
+- **Text**: Light text becomes dark text for readability
+- **Cards** (Series section): Dark cards become slightly lighter cream/white cards with soft borders
+- **Hero overlay**: Adjusted so the background photo still shows through but blends into cream instead of black
+- **Navbar**: Scrolled state uses cream with blur instead of dark
+- **Floating particles**: Reduced opacity and adjusted orb colors to work on a light background
+- **Section dividers**: Adjusted gradient direction for light background
+- **Buttons**: Outline buttons switch to dark borders/text; gradient CTA stays the same
+- **Footer**: Border and text adjusted for light background
 
-- Photo inserted after the "How It Started" heading, before the paragraphs
-- Displayed with rounded corners (`rounded-2xl`) and a slight rotation for a casual, scrapbook-like feel
-- Wrapped in a `motion.div` that animates in on scroll, consistent with the rest of the section
-- Soft shadow to give it depth against the dark background
+### Technical Details
 
-### Technical Steps
+**1. Update CSS variables in `src/index.css`**
+- `--background` from dark (240 10% 4%) to cream (~24 76% 91%, which is #f8e6d6)
+- `--foreground` from white (0 0% 95%) to dark (240 10% 10%)
+- `--card` to a slightly lighter cream or white
+- `--card-foreground` to dark
+- `--muted` and `--muted-foreground` adjusted for light background contrast
+- `--border` to a soft warm gray
+- `--input` to match
 
-1. **Copy the image** from `user-uploads://DSC05802.jpeg` to `src/assets/hosts-outdoor.jpg`
-2. **Update `StorySection.tsx`**:
-   - Import the image
-   - Add a `motion.div` container between the heading and the paragraphs
-   - Style the image with `rounded-2xl`, a subtle `rotate-1` tilt, `shadow-2xl`, and `max-w-2xl mx-auto`
-   - Add alt text: "Bruna and Fabi smiling outdoors by a lake"
+**2. Update `src/components/HeroSection.tsx`**
+- Change overlay gradient from `from-background/60 via-background/70 to-background/90` to blend into cream instead of dark
 
-### Result
+**3. Update `src/components/Navbar.tsx`**
+- Scrolled state already uses `bg-background/80` which will automatically pick up the new cream color
 
-The "How It Started" section will open with the heading, then show a warm, slightly tilted photo of Bruna and Fabi laughing together outdoors, followed by the origin story text -- giving the section an authentic, personal feel.
+**4. Update `src/components/FloatingParticles.tsx`**
+- Lower opacity of gradient orbs so they're subtle on light background
 
+**5. Update `src/components/SectionDivider.tsx`**
+- Adjust gradient to be visible on light background (e.g., primary to cream instead of primary to transparent)
+
+**6. Update `src/components/ListenSection.tsx`**
+- Change outline button borders from `border-foreground/40` to work with dark foreground on cream
+
+**7. Update `src/components/SeriesSection.tsx`**
+- Card `bg-card` and `border-border` will automatically update via CSS variables
+
+No animations are touched -- all `motion` components, transitions, and hover effects remain exactly as they are.

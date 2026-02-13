@@ -1,28 +1,39 @@
 
 
-## Add Photo to "How It Started" Section
+## Fix Google Indexing: Remove noindex Exclusion
 
-### What We'll Do
+### The Problem
 
-Add the beautiful outdoor photo of Bruna and Fabi to the **StorySection** ("How It Started"), placed between the heading and the story text. The image will feel natural and warm, matching the section's personal tone.
+Google Search Console shows 2 pages "Excluded by 'noindex' tag." Your HTML already has `<meta name="robots" content="index, follow" />`, your `robots.txt` allows all crawlers, and your `sitemap.xml` exists -- so your code looks correct.
 
-### Layout
+The most likely cause is that the Lovable hosting platform injects a `noindex` header or meta tag on the `*.lovable.app` subdomain. To fix this, you need to connect your **custom domain** (`humanendurancepodcast.com`) to your Lovable project. Once a custom domain is connected, the noindex restriction is typically removed.
 
-- Photo inserted after the "How It Started" heading, before the paragraphs
-- Displayed with rounded corners (`rounded-2xl`) and a slight rotation for a casual, scrapbook-like feel
-- Wrapped in a `motion.div` that animates in on scroll, consistent with the rest of the section
-- Soft shadow to give it depth against the dark background
+### What We'll Do (Code Side)
 
-### Technical Steps
+Even though your files are mostly correct, we'll tighten everything up:
 
-1. **Copy the image** from `user-uploads://DSC05802.jpeg` to `src/assets/hosts-outdoor.jpg`
-2. **Update `StorySection.tsx`**:
-   - Import the image
-   - Add a `motion.div` container between the heading and the paragraphs
-   - Style the image with `rounded-2xl`, a subtle `rotate-1` tilt, `shadow-2xl`, and `max-w-2xl mx-auto`
-   - Add alt text: "Bruna and Fabi smiling outdoors by a lake"
+**1. Verify `index.html` meta tag** -- already has `content="index, follow"` (no changes needed)
 
-### Result
+**2. Update `public/robots.txt`** -- already correct, but we'll ensure it's clean:
+   - Allow all user agents
+   - Reference the sitemap at your custom domain
 
-The "How It Started" section will open with the heading, then show a warm, slightly tilted photo of Bruna and Fabi laughing together outdoors, followed by the origin story text -- giving the section an authentic, personal feel.
+**3. Update `public/sitemap.xml`**
+   - Update `<lastmod>` to today's date (`2026-02-13`)
+   - Keep the canonical URL pointing to `humanendurancepodcast.com`
+
+**4. Add a `<noscript>` fallback in `index.html`** for crawlers that don't execute JavaScript, containing a basic text summary of the page content -- this helps ensure crawlers can see content even without running React.
+
+### What You Need to Do (Outside Lovable)
+
+After we publish these changes, you should:
+
+1. **Connect your custom domain** (`humanendurancepodcast.com`) to your Lovable project if not already done -- this is the most likely fix for the noindex issue
+2. In Google Search Console, go to **URL Inspection** and request re-indexing for your homepage
+3. Under **Sitemaps**, re-submit `https://humanendurancepodcast.com/sitemap.xml`
+4. Click **Validate Fix** on the "Excluded by noindex tag" issue to start Google's re-crawl
+
+### Files to Edit
+- `public/sitemap.xml` -- update lastmod date
+- `index.html` -- add noscript fallback for SEO crawlers
 

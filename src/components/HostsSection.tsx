@@ -7,7 +7,7 @@ const hosts = [
   {
     name: "Bruna",
     roleText: "Runner · Coach · Co-founder of",
-    bio: "I've been an athlete my whole life — tennis through my teens, then NCAA track and cross country at Emory, where I fell in love with running. For me, running is where I find peace, where I recharge. There's no feeling better than a really great marathon. I started coaching in 2021 because I wanted to share what running has given me: structure, determination, mental clarity, and a sense of what's possible.\n\nI also bring a personal perspective to conversations about injuries and overtraining. After struggling with injuries for three years, I was diagnosed with RED-S (Relative Energy Deficiency in Sport). It completely changed how I approach training and coaching, and it's something I'm passionate about discussing openly because too many athletes are dealing with this without knowing it.",
+    bio: "I've been an athlete my whole life: tennis through my teens, then NCAA track and cross country at Emory University, where I fell in love with running. For me, running is where I find peace, where I recharge. There's no feeling better than a really great marathon. I started coaching in 2021 because I wanted to share what running has given me: structure, determination, mental clarity, and a sense of what's possible.\n\nI bring to the podcast a personal perspective to conversations about injuries and overtraining. After struggling with injuries from 2023-2025, I was diagnosed with RED-S (Relative Energy Deficiency in Sport). It completely changed how I approach training and coaching, and it's something I'm passionate about discussing openly because too many athletes are dealing with this without knowing it.",
     image: hostBruna,
     instagram: "https://www.instagram.com/justbrunathings/",
     instagramHandle: "@justbrunathings",
@@ -15,7 +15,7 @@ const hosts = [
   {
     name: "Fabi",
     roleText: "Triathlete · Coach · Co-founder of",
-    bio: "I discovered triathlon in my late 20s, convinced it wasn't for me. I believed you had to be a lifelong athlete to do endurance sports — that if you didn't grow up swimming and biking, you'd missed your window. Within three years, I went from barely swimming 25 meters to completing my first full Ironman. That race was the moment I realized: I actually am an endurance athlete.\n\nNow I coach beginner triathletes, helping them get started and cross their first finish lines. What I love most is feeling the progress — seeing tangible proof that consistency pays off. On the podcast, I explore the mindset side: how we push through doubt, trust the process, and redefine what we thought was possible.",
+    bio: "I discovered triathlon in my late 20s, convinced it wasn't for me. I believed you had to be a lifelong athlete to do endurance sports: that if you didn't grow up swimming and biking, you'd missed your window. Within three years, I went from barely swimming 25 meters to completing my first full Ironman. That race was the moment I realized I actually am an endurance athlete.\n\nNow I coach beginner triathletes, helping them get started and cross their first finish lines. What I love most is witnessing the progress firsthand, seeing tangible proof that consistency pays off. On the podcast, I explore the mindset side: how we push through doubt, trust the process, and redefine what we thought was possible.",
     image: hostFabi,
     instagram: "https://www.instagram.com/endurance_fabi/",
     instagramHandle: "@endurance_fabi",

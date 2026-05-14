@@ -1,0 +1,20 @@
+# Human Endurance Podcast
+
+> Endurance sports podcast hosted by Bruna and Fabi, exploring the science and stories behind human performance in running, triathlon, and ultra-endurance sports.
+
+The Human Endurance Podcast features two series: an Expert Series with specialists in sports science, nutrition, physiology, and coaching, and a Guest Series sharing real stories from everyday athletes balancing full-time lives with extraordinary endurance pursuits like ultras and Ironmans. Hosted by Bruna (runner, coach, NCAA track athlete, co-founder of Augo Training) and Fabi (triathlete, coach, Ironman finisher, co-founder of Augo Training).
+
+## Pages
+
+- [Home](/): Podcast overview, hosts, series, featured episodes, and where to listen.
+
+## Listen
+
+- [Spotify](https://open.spotify.com/show/4JR5cvFpYmuvaQxbx2D9nb): Full episode catalog on Spotify.
+- [Apple Podcasts](https://podcasts.apple.com/us/podcast/human-endurance/id1729061731): Full episode catalog on Apple Podcasts.
+- [YouTube](https://www.youtube.com/@HumanEndurance): Video episodes on YouTube.
+
+## Optional
+
+- [Blog](https://justbrunathings.substack.com/): Bruna's Substack with endurance training writing and race reports.
+- [Augo Training](https://www.augotraining.com): Coaching company co-founded by the hosts.

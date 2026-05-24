@@ -1,16 +1,18 @@
+## Connect Google Search Console
 
+### Steps
 
-## Replace Favicon with Human Endurance Logo
+1. **Initiate the connection** — Trigger the Google Search Console connector. You'll be prompted to sign in with Google and authorize access to your Search Console data.
 
-### What We'll Do
+2. **Verify the connection** — Once authorized, confirm the credentials work via the gateway's verify endpoint.
 
-Replace the current default favicon with your colorful wave logo (`src/assets/logo.png`).
+3. **Check site verification status** — List the sites already verified on your account. If `humanendurancepodcast.com` is already there, we're done with verification.
 
-### Technical Steps
+4. **If not yet verified** — Generate a Google site-verification META token, add it to `index.html` `<head>`, you republish the site, then call the verify endpoint and add the site to Search Console.
 
-1. **Copy the logo** from `src/assets/logo.png` to `public/favicon.png`
-2. **Update `index.html`** to reference the new favicon:
-   - Change `<link rel="icon" href="/favicon.ico" type="image/x-icon" />` to `<link rel="icon" href="/favicon.png" type="image/png" />`
+5. **Mark the SEO finding fixed** — Once the property is live in Search Console, update the corresponding finding.
 
-That's it -- your wave logo will show up as the browser tab icon across all pages.
+### Notes
 
+- Verification uses the META tag method (the only method that works for a Lovable-hosted site).
+- After step 4 the site needs to be **republished** before Google can fetch the meta tag — I'll prompt you when that's needed.

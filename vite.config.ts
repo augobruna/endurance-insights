@@ -15,6 +15,7 @@ export default defineConfig(({ mode }) => ({
       overlay: false,
     },
   },
+  plugins: [
     {
       enforce: "pre" as const,
       ...mdx({
@@ -25,7 +26,6 @@ export default defineConfig(({ mode }) => ({
         providerImportSource: "@mdx-js/react",
       }),
     },
-
     react(),
     mode === "development" && componentTagger(),
   ].filter(Boolean),

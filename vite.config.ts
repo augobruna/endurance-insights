@@ -15,9 +15,8 @@ export default defineConfig(({ mode }) => ({
       overlay: false,
     },
   },
-  plugins: [
     {
-      enforce: "pre",
+      enforce: "pre" as const,
       ...mdx({
         remarkPlugins: [
           remarkFrontmatter,
@@ -26,6 +25,7 @@ export default defineConfig(({ mode }) => ({
         providerImportSource: "@mdx-js/react",
       }),
     },
+
     react(),
     mode === "development" && componentTagger(),
   ].filter(Boolean),

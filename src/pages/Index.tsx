@@ -4,7 +4,6 @@ import StorySection from "@/components/StorySection";
 import SeriesSection from "@/components/SeriesSection";
 import FeaturedEpisodesSection from "@/components/FeaturedEpisodesSection";
 import HostsSection from "@/components/HostsSection";
-import BlogSection from "@/components/BlogSection";
 import ListenSection from "@/components/ListenSection";
 import Footer from "@/components/Footer";
 import FloatingParticles from "@/components/FloatingParticles";
@@ -24,8 +23,6 @@ const Index = () => {
       <SectionDivider />
       <StorySection />
       <SectionDivider />
-      <BlogSection />
-      <SectionDivider />
       <ListenSection />
       <Footer />
 
@@ -40,8 +37,8 @@ const Index = () => {
           <h2>Meet the Hosts</h2>
           <p>Bruna — Runner, Coach, and Co-founder of Augo Training.</p>
           <p>Fabi — Triathlete, Coach, and Co-founder of Augo Training.</p>
-          <h2>Endurance Sports Blog</h2>
-          <p>Read in-depth articles on endurance training, race reports, and coaching insights on the <a href="https://justbrunathings.substack.com/">Human Endurance Blog</a>.</p>
+          <h2>Blog</h2>
+          <p>Read in-depth articles on endurance training, race reports, and coaching insights on the <a href="/blog">Human Endurance Blog</a>.</p>
           <h2>Listen</h2>
           <ul>
             <li><a href="https://open.spotify.com/show/4JR5cvFpYmuvaQxbx2D9nb">Spotify</a></li>

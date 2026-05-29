@@ -7,6 +7,7 @@ The Human Endurance Podcast features two series: an Expert Series with specialis
 ## Pages
 
 - [Home](/): Podcast overview, hosts, series, featured episodes, and where to listen.
+- [Blog](/blog): Long-form articles on endurance training, race reports, and interviews.
 
 ## Listen
 
@@ -16,5 +17,5 @@ The Human Endurance Podcast features two series: an Expert Series with specialis
 
 ## Optional
 
-- [Blog](https://justbrunathings.substack.com/): Bruna's Substack with endurance training writing and race reports.
+- [Substack](https://justbrunathings.substack.com/): Email subscription mirror of selected blog posts.
 - [Augo Training](https://www.augotraining.com): Coaching company co-founded by the hosts.

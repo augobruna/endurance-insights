@@ -1,73 +1,43 @@
-# Welcome to your Lovable project
+# Human Endurance Podcast — website
 
-## Project info
+The website for the Human Endurance Podcast, served at
+[humanendurancepodcast.com](https://humanendurancepodcast.com).
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+It's a static single-page app (Vite + React + TypeScript, Tailwind, shadcn-ui) with an
+MDX-based blog. There is no backend — blog posts are plain `.mdx` files compiled into the
+site at build time.
 
-## How can I edit this code?
+## Local development
 
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+Requires Node.js 20+ and npm.
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+npm install      # install dependencies
+npm run dev      # start the dev server (http://localhost:8080)
 ```
 
-**Edit a file directly in GitHub**
+## Building
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```sh
+npm run build    # regenerates the sitemap, then builds into dist/
+npm run preview  # serve the production build locally to sanity-check it
+```
 
-**Use GitHub Codespaces**
+`npm run build` first runs `scripts/generate-sitemap.mjs`, which reads the blog posts and
+writes `public/sitemap.xml`, then runs `vite build`.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Writing a blog post
 
-## What technologies are used for this project?
+1. Add a new `.mdx` file under `src/content/blog/` (use `src/content/blog/_template.mdx` as a
+   starting point — files beginning with `_` are ignored).
+2. Fill in the frontmatter (`title`, `slug`, `date`, `description`, etc.).
+3. Commit and push to `main` — the post, sitemap entry, and SEO metadata are generated
+   automatically on deploy.
 
-This project is built with:
+## Deployment
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+The site is hosted on **GitHub Pages** and deploys automatically. Any push to the `main`
+branch triggers the workflow in `.github/workflows/deploy.yml`, which builds the site and
+publishes `dist/` to GitHub Pages. The custom domain is kept wired via `public/CNAME`.
 
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+So the publish workflow is simply: **edit → commit → push to `main`**.

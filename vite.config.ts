@@ -4,6 +4,7 @@ import path from "path";
 import mdx from "@mdx-js/rollup";
 import remarkFrontmatter from "remark-frontmatter";
 import remarkMdxFrontmatter from "remark-mdx-frontmatter";
+import { mcpPlugin } from "@lovable.dev/mcp-js/stacks/supabase/vite";
 
 // https://vitejs.dev/config/
 export default defineConfig(() => ({
@@ -26,6 +27,7 @@ export default defineConfig(() => ({
       }),
     },
     react(),
+    mcpPlugin(),
   ],
   resolve: {
     alias: {

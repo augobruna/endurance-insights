@@ -35,11 +35,9 @@ jobs:
       - name: Build
         run: npm run build
 
-      # GitHub Pages has no server-side rewrites, so serve the SPA shell for
-      # unmatched deep links (e.g. /blog/<slug>) via 404.html. React Router
-      # then renders the correct route client-side.
-      - name: Add SPA fallback
-        run: cp dist/index.html dist/404.html
+      # The build prerenders every route (including /404.html) into static
+      # HTML, so GitHub Pages serves the correct page for each URL and the
+      # branded 404 for unmatched paths. No SPA fallback copy is needed.
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

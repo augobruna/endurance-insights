@@ -38,6 +38,18 @@ writes `public/sitemap.xml`, then runs `vite build`.
 
 The site is hosted on **GitHub Pages** and deploys automatically. Any push to the `main`
 branch triggers the workflow in `.github/workflows/deploy.yml`, which builds the site and
-publishes `dist/` to GitHub Pages. The custom domain is kept wired via `public/CNAME`.
+publishes `dist/` to GitHub Pages.
 
-So the publish workflow is simply: **edit → commit → push to `main`**.
+So the publish workflow is simply: **edit → commit → push to `main`**. A run takes about a
+minute; follow it with `gh run watch`.
+
+### Custom domain
+
+The custom domain is configured **on the repository** (Settings → Pages → Custom domain), not
+by the `public/CNAME` file. Because this repo deploys via a GitHub Actions workflow rather
+than from a branch, GitHub does not read `CNAME` from the build output to set the domain —
+the file ships in `dist/` but has no effect on configuration. Changing the domain means
+changing the repo setting.
+
+DNS lives at GoDaddy (`ns57`/`ns58.domaincontrol.com`). The apex should point at GitHub's four
+Pages IPs (`185.199.108–111.153`) and `www` should be a `CNAME` to `augobruna.github.io`.

@@ -5,7 +5,11 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import EpisodeMeta from "@/components/podcast/EpisodeMeta";
 import EpisodeNotes from "@/components/podcast/EpisodeNotes";
-import { getEpisodeBySlug, getAdjacentEpisodes } from "@/lib/episodes";
+import {
+  getEpisodeBySlug,
+  getAdjacentEpisodes,
+  absoluteImage,
+} from "@/lib/episodes";
 import { SITE_URL, getPostByEpisodeSlug } from "@/lib/posts";
 
 const LISTEN_LINKS = [
@@ -26,7 +30,7 @@ const Episode = () => {
   const { prev, next } = getAdjacentEpisodes(slug);
   const companion = getPostByEpisodeSlug(episode.slug);
   const canonical = `${SITE_URL}/podcast/${episode.slug}`;
-  const image = episode.image ?? `${SITE_URL}/og-image.png`;
+  const image = absoluteImage(episode, SITE_URL);
 
   const jsonLd = [
     {

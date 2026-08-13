@@ -57,6 +57,18 @@ export function formatDuration(seconds: number | null): string | null {
   return h ? `${h} h ${m} min` : `${m} min`;
 }
 
+/**
+ * Absolute artwork URL for OpenGraph and JSON-LD, which reject relative paths.
+ * `image` is normally a local path, but stays an absolute CDN URL when the
+ * build-time download failed for that episode.
+ */
+export function absoluteImage(episode: Episode, siteUrl: string): string {
+  if (!episode.image) return `${siteUrl}/og-image.png`;
+  return episode.image.startsWith("http")
+    ? episode.image
+    : `${siteUrl}${episode.image}`;
+}
+
 /** The line under the title: guest first, since that's what people search for. */
 export function episodeHeadline(episode: Episode): string {
   return episode.guest ? `${episode.topic} — ${episode.guest}` : episode.topic;

@@ -108,7 +108,7 @@ var get_blog_post_default = defineTool3({
   title: "Get blog post",
   description: "Fetch a single blog post from humanendurancepodcast.com/blog/<slug>. Returns title, description, and readable text.",
   inputSchema: {
-    slug: z.string().min(1).describe("The blog post slug, e.g. 'welcome-to-the-blog'.")
+    slug: z.string().min(1).describe("The blog post slug, e.g. 'pascal-rueger-100km-swiss-record'.")
   },
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: true },
   handler: async ({ slug }) => {

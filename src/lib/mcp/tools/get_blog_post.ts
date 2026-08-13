@@ -27,7 +27,7 @@ export default defineTool({
     slug: z
       .string()
       .min(1)
-      .describe("The blog post slug, e.g. 'welcome-to-the-blog'."),
+      .describe("The blog post slug, e.g. 'pascal-rueger-100km-swiss-record'."),
   },
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: true },
   handler: async ({ slug }) => {

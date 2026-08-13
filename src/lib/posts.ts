@@ -27,8 +27,11 @@ const modules = import.meta.glob<MDXModule>("/src/content/blog/*.mdx", {
   eager: true,
 });
 
-const allPosts: Post[] = Object.values(modules)
-  .map((mod) => ({
+const allPosts: Post[] = Object.entries(modules)
+  // `_`-prefixed files are scaffolding, not posts. The sitemap and prerender
+  // scripts skip them the same way.
+  .filter(([path]) => !path.split("/").pop()!.startsWith("_"))
+  .map(([, mod]) => ({
     frontmatter: mod.frontmatter,
     Component: mod.default,
   }))

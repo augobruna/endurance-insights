@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import behindTheScenes from "@/assets/behind-the-scenes.jpg";
@@ -55,7 +56,7 @@ const HeroSection = () => {
             style={{ background: "linear-gradient(135deg, #f53861 0%, #d42f6b 40%, #8a2387 70%, #0060a6 100%)" }}
             asChild
           >
-            <a href="https://open.spotify.com/show/4JR5cvFpYmuvaQxbx2D9nb?si=48af90b3b0cc4b2f" target="_blank" rel="noopener noreferrer">
+            <a href="https://tr.ee/w9Uhc9ddA_" target="_blank" rel="noopener noreferrer">
               <Play className="h-5 w-5" />
               Listen Now
             </a>
@@ -66,7 +67,7 @@ const HeroSection = () => {
             className="text-lg px-8 py-6 rounded-full border-foreground/40 text-foreground hover:border-primary hover:text-primary hover:bg-primary/10 transition-all duration-300"
             asChild
           >
-            <a href="#series">Explore the Series</a>
+            <Link to="/podcast">Explore Episodes</Link>
           </Button>
         </motion.div>
       </div>

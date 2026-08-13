@@ -42,6 +42,13 @@ const episodeSlugs = existsSync(episodesFile)
   ? JSON.parse(readFileSync(episodesFile, "utf8")).map((e) => e.slug)
   : [];
 
+// Show notes live outside the client bundle, so each episode page is rendered
+// with its own notes and carries a copy inline for hydration.
+const notesFile = join(root, "src/content/episode-notes.json");
+const allNotes = existsSync(notesFile)
+  ? JSON.parse(readFileSync(notesFile, "utf8"))
+  : {};
+
 // Route -> output file (relative to dist/)
 const routes = [
   { url: "/", out: "index.html" },
@@ -49,6 +56,7 @@ const routes = [
   ...episodeSlugs.map((slug) => ({
     url: `/podcast/${slug}`,
     out: `podcast/${slug}/index.html`,
+    notes: { [slug]: allNotes[slug] ?? "" },
   })),
   { url: "/blog", out: "blog/index.html" },
   ...slugs.map((slug) => ({
@@ -58,15 +66,26 @@ const routes = [
   { url: "/404", out: "404.html" },
 ];
 
-function inject(tpl, { head, html }) {
+/**
+ * Inline the notes ahead of the app bundle so they're set before hydration.
+ * `<` is escaped because a literal `</script>` inside the JSON would otherwise
+ * close this tag early.
+ */
+function notesScript(notes) {
+  if (!notes) return "";
+  const json = JSON.stringify(notes).replace(/</g, "\\u003c");
+  return `\n    <script>window.__EPISODE_NOTES__=${json}</script>`;
+}
+
+function inject(tpl, { head, html, notes }) {
   return tpl
-    .replace("<!--ssr-head-->", head)
+    .replace("<!--ssr-head-->", head + notesScript(notes))
     .replace("<!--ssr-outlet-->", html);
 }
 
 for (const route of routes) {
-  const { html, head } = render(route.url);
-  const page = inject(template, { html, head });
+  const { html, head } = render(route.url, route.notes ?? {});
+  const page = inject(template, { html, head, notes: route.notes });
   const outPath = join(distDir, route.out);
   mkdirSync(dirname(outPath), { recursive: true });
   writeFileSync(outPath, page);

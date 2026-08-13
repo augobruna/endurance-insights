@@ -7,17 +7,22 @@
  * keep the committed copy rather than failing the deploy — a stale episode list
  * beats a broken site.
  */
-import { readFileSync, writeFileSync, existsSync } from "node:fs";
+import { readFileSync, writeFileSync, existsSync, mkdirSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { JSDOM } from "jsdom";
+import sharp from "sharp";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = join(__dirname, "..");
 const outFile = join(root, "src/content/episodes.json");
+const notesFile = join(root, "src/content/episode-notes.json");
+const notesDir = join(root, "public/episodes");
+const artDir = join(root, "public/podcast");
 
 const FEED_URL = "https://anchor.fm/s/fd7296f8/podcast/rss";
 const FETCH_TIMEOUT_MS = 20000;
+const ARTWORK_SIZE = 400;
 
 // ---------------------------------------------------------------- xml helpers
 
@@ -305,6 +310,9 @@ function parseFeed(xml) {
       date: new Date(tag(item, "pubDate")).toISOString().slice(0, 10),
       description: plain.length > 300 ? `${plain.slice(0, 297).trimEnd()}…` : plain,
       notesHtml: notes,
+      // `image` is rewritten to the local copy by downloadArtwork(); the
+      // original is kept so a failed download can still fall back to the CDN.
+      remoteImage: attr(item, "itunes:image", "href") || null,
       image: attr(item, "itunes:image", "href") || null,
       audio: attr(item, "enclosure", "url") || null,
       spotifyUrl: tag(item, "link") || null,
@@ -351,5 +359,70 @@ try {
 }
 
 episodes.sort((a, b) => b.date.localeCompare(a.date));
-writeFileSync(outFile, `${JSON.stringify(episodes, null, 2)}\n`);
-console.log(`Wrote ${episodes.length} episodes to src/content/episodes.json`);
+
+/**
+ * Episode artwork on the feed CDN averages ~690 KB each and is displayed at
+ * 200px, so linking it directly put ~28 MB on /podcast. Re-host a 400px copy.
+ * Existing files are left alone, so only new episodes cost a download.
+ */
+async function downloadArtwork(list) {
+  mkdirSync(artDir, { recursive: true });
+  let fetched = 0;
+  let failed = 0;
+
+  for (const ep of list) {
+    const dest = join(artDir, `${ep.slug}.jpg`);
+    if (existsSync(dest)) {
+      ep.image = `/podcast/${ep.slug}.jpg`;
+      continue;
+    }
+    if (!ep.remoteImage) {
+      ep.image = null;
+      continue;
+    }
+    try {
+      const res = await fetch(ep.remoteImage, {
+        headers: { "user-agent": "humanendurancepodcast.com build" },
+      });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const buf = Buffer.from(await res.arrayBuffer());
+      await sharp(buf)
+        .resize(ARTWORK_SIZE, ARTWORK_SIZE, { fit: "cover" })
+        .jpeg({ quality: 82, mozjpeg: true })
+        .toFile(dest);
+      ep.image = `/podcast/${ep.slug}.jpg`;
+      fetched++;
+    } catch (err) {
+      // Fall back to the CDN URL for this one episode rather than failing.
+      console.warn(`  artwork ${ep.slug}: ${err.message} — using remote URL`);
+      failed++;
+    }
+  }
+  return { fetched, failed };
+}
+
+const art = await downloadArtwork(episodes);
+
+// Show notes are ~60 KB of the episode data and are only ever needed on the
+// one episode page being viewed, so they ship as separate files rather than
+// riding along in every page's JS bundle.
+mkdirSync(notesDir, { recursive: true });
+for (const ep of episodes) {
+  writeFileSync(
+    join(notesDir, `${ep.slug}.json`),
+    JSON.stringify({ slug: ep.slug, notesHtml: ep.notesHtml })
+  );
+}
+
+const metadata = episodes.map(({ notesHtml, ...rest }) => rest);
+writeFileSync(outFile, `${JSON.stringify(metadata, null, 2)}\n`);
+writeFileSync(notesFile, `${JSON.stringify(
+  Object.fromEntries(episodes.map((e) => [e.slug, e.notesHtml])),
+  null,
+  2
+)}\n`);
+
+console.log(
+  `Wrote ${episodes.length} episodes to src/content/episodes.json ` +
+    `(${art.fetched} artwork downloaded, ${art.failed} fell back to remote)`
+);

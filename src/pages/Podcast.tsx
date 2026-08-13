@@ -1,4 +1,5 @@
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
+import { useSearchParams } from "react-router-dom";
 import { Search } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -8,7 +9,13 @@ import { episodes } from "@/lib/episodes";
 import { SITE_URL } from "@/lib/posts";
 
 const Podcast = () => {
-  const [query, setQuery] = useState("");
+  // Seeded from ?q= so the SearchAction advertised in the homepage schema
+  // actually works when a search engine sends someone here.
+  const [searchParams, setSearchParams] = useSearchParams();
+  const query = searchParams.get("q") ?? "";
+  const setQuery = (value: string) => {
+    setSearchParams(value ? { q: value } : {}, { replace: true });
+  };
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();

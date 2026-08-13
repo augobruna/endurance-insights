@@ -11,55 +11,88 @@ import SectionDivider from "@/components/SectionDivider";
 import SEO from "@/components/SEO";
 import { SITE_URL } from "@/lib/posts";
 
+const LISTEN_LINKS = [
+  "https://open.spotify.com/show/4JR5cvFpYmuvaQxbx2D9nb",
+  "https://podcasts.apple.com/us/podcast/human-endurance/id1729061731",
+  "https://www.youtube.com/@HumanEndurance",
+  "https://www.instagram.com/humanendurancepodcast/",
+  "https://justbrunathings.substack.com/",
+];
+
+// Hosts are declared as full entities with stable @ids so the podcast,
+// organisation and articles can all point at the same person rather than
+// repeating a bare name string.
+const BRUNA = {
+  "@type": "Person",
+  "@id": `${SITE_URL}/#bruna`,
+  name: "Bruna Maia",
+  jobTitle: "Endurance coach and podcast host",
+  description:
+    "Runner, coach, and co-founder of Augo Training. Co-host of the Human Endurance Podcast.",
+  url: SITE_URL,
+  sameAs: [
+    "https://www.instagram.com/justbrunathings/",
+    "https://justbrunathings.substack.com/",
+    "https://www.augotraining.com",
+  ],
+};
+
+const FABI = {
+  "@type": "Person",
+  "@id": `${SITE_URL}/#fabi`,
+  name: "Fabienne Maia",
+  jobTitle: "Triathlon coach and podcast host",
+  description:
+    "Triathlete, coach, Ironman finisher, and co-founder of Augo Training. Co-host of the Human Endurance Podcast.",
+  url: SITE_URL,
+  sameAs: [
+    "https://www.instagram.com/endurance_fabi/",
+    "https://www.augotraining.com",
+  ],
+};
+
 const homeJsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "PodcastSeries",
+      "@id": `${SITE_URL}/#podcast`,
       name: "Human Endurance Podcast",
       description:
         "Endurance sports podcast exploring the science and stories behind human performance. Expert Series with specialists in sports science, nutrition, and coaching. Guest Series with real athletes doing extraordinary things while balancing everyday life.",
-      url: SITE_URL,
-      webFeed: "https://open.spotify.com/show/4JR5cvFpYmuvaQxbx2D9nb",
+      url: `${SITE_URL}/podcast`,
+      // The actual RSS feed — this previously pointed at the Spotify page,
+      // which is a listing rather than a feed.
+      webFeed: "https://anchor.fm/s/fd7296f8/podcast/rss",
       image: `${SITE_URL}/og-image.png`,
-      author: [
-        {
-          "@type": "Person",
-          name: "Bruna",
-          description: "Runner, Coach, and Co-founder of Augo Training",
-          url: "https://www.instagram.com/justbrunathings/",
-        },
-        {
-          "@type": "Person",
-          name: "Fabi",
-          description: "Triathlete, Coach, and Co-founder of Augo Training",
-          url: "https://www.instagram.com/endurance_fabi/",
-        },
-      ],
-      sameAs: [
-        "https://open.spotify.com/show/4JR5cvFpYmuvaQxbx2D9nb",
-        "https://podcasts.apple.com/us/podcast/human-endurance/id1729061731",
-        "https://www.youtube.com/@HumanEndurance",
-        "https://www.instagram.com/humanendurancepodcast/",
-        "https://justbrunathings.substack.com/",
-      ],
+      author: [{ "@id": BRUNA["@id"] }, { "@id": FABI["@id"] }],
+      sameAs: LISTEN_LINKS,
     },
+    BRUNA,
+    FABI,
     {
       "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
       name: "Human Endurance Podcast",
       url: SITE_URL,
+      publisher: { "@id": `${SITE_URL}/#organization` },
+      potentialAction: {
+        "@type": "SearchAction",
+        target: {
+          "@type": "EntryPoint",
+          urlTemplate: `${SITE_URL}/podcast?q={search_term_string}`,
+        },
+        "query-input": "required name=search_term_string",
+      },
     },
     {
       "@type": "Organization",
+      "@id": `${SITE_URL}/#organization`,
       name: "Human Endurance Podcast",
       url: SITE_URL,
       logo: `${SITE_URL}/og-image.png`,
-      sameAs: [
-        "https://open.spotify.com/show/4JR5cvFpYmuvaQxbx2D9nb",
-        "https://podcasts.apple.com/us/podcast/human-endurance/id1729061731",
-        "https://www.youtube.com/@HumanEndurance",
-        "https://justbrunathings.substack.com/",
-      ],
+      founder: [{ "@id": BRUNA["@id"] }, { "@id": FABI["@id"] }],
+      sameAs: LISTEN_LINKS,
     },
   ],
 };

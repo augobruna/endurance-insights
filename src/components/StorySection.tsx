@@ -28,7 +28,11 @@ const StorySection = () => {
           <img
             src={hostsOutdoor}
             alt="Bruna and Fabi smiling outdoors by a lake"
-            className="rounded-2xl rotate-1 shadow-2xl max-w-2xl w-full"
+            loading="lazy"
+            decoding="async"
+            width={1400}
+            height={933}
+            className="rounded-2xl rotate-1 shadow-2xl max-w-2xl w-full h-auto"
           />
         </motion.div>
 

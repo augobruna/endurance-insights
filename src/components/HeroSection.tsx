@@ -7,9 +7,17 @@ import behindTheScenes from "@/assets/behind-the-scenes.jpg";
 const HeroSection = () => {
   return (
     <header className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* LCP element. No preload link is needed — it's in the prerendered HTML,
+          so the parser finds it immediately; fetchpriority is what moves it
+          ahead of the other requests. */}
       <img
         src={behindTheScenes}
         alt="Bruna and Fabi recording the Human Endurance podcast"
+        // React 18 wants the lowercase DOM attribute name here.
+        {...{ fetchpriority: "high" }}
+        decoding="async"
+        width={1179}
+        height={852}
         className="absolute inset-0 w-full h-full object-cover"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/70 to-background/90" />
@@ -24,15 +32,25 @@ const HeroSection = () => {
           Podcast
         </motion.p>
 
+        {/* One continuous heading: the previous markup put a <br> between the
+            words, so the text content read as "HumanEndurance" and carried no
+            topic words at all. The line break is now presentational. */}
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-6xl md:text-8xl lg:text-9xl leading-none mb-6"
+          className="mb-6"
         >
-          Human
-          <br />
-          <span className="text-primary">Endurance</span>
+          <span className="block text-6xl md:text-8xl lg:text-9xl leading-none">
+            Human <span className="text-primary">Endurance</span>
+          </span>
+          {/* Adjacent block elements concatenate with no whitespace when the
+              text is extracted, so the separator is spelled out for readers
+              that see text rather than layout. */}
+          <span className="sr-only"> — </span>
+          <span className="mt-4 block text-base md:text-xl font-light tracking-[0.2em] uppercase text-muted-foreground">
+            the endurance sports podcast
+          </span>
         </motion.h1>
 
         <motion.p
@@ -41,7 +59,8 @@ const HeroSection = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-foreground text-lg md:text-xl max-w-2xl mx-auto mb-10 font-light"
         >
-          Redefining human boundaries through endurance sports
+          Conversations with coaches, sports scientists and athletes on
+          training, racing and what actually makes endurance performance work.
         </motion.p>
 
         <motion.div

@@ -11,6 +11,8 @@ export type PostFrontmatter = {
   tags?: string[];
   canonical?: string;
   substackUrl?: string;
+  /** Slug of the episode this post accompanies, for cross-linking both ways. */
+  episodeSlug?: string;
 };
 
 export type Post = {
@@ -46,6 +48,14 @@ export const posts = allPosts;
 
 export function getPostBySlug(slug: string): Post | undefined {
   return allPosts.find((p) => p.frontmatter.slug === slug);
+}
+
+/**
+ * Reverse of the `episodeSlug` frontmatter field, so an episode can find its
+ * companion article without a second mapping to keep in sync.
+ */
+export function getPostByEpisodeSlug(episodeSlug: string): Post | undefined {
+  return allPosts.find((p) => p.frontmatter.episodeSlug === episodeSlug);
 }
 
 export function getAdjacentPosts(slug: string): {

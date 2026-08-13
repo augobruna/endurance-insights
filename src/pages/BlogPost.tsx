@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import PostMeta from "@/components/blog/PostMeta";
 import { getPostBySlug, getAdjacentPosts, SITE_URL } from "@/lib/posts";
+import { getEpisodeBySlug } from "@/lib/episodes";
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -14,28 +15,56 @@ const BlogPost = () => {
   if (!post) return <Navigate to="/blog" replace />;
 
   const { frontmatter: f, Component } = post;
+  const episode = f.episodeSlug ? getEpisodeBySlug(f.episodeSlug) : undefined;
   const { prev, next } = getAdjacentPosts(slug);
   const canonical = f.canonical ?? `${SITE_URL}/blog/${f.slug}`;
   const image = f.cover ? `${SITE_URL}${f.cover}` : undefined;
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    headline: f.title,
-    description: f.description,
-    image: image ? [image] : undefined,
-    datePublished: f.date,
-    author: { "@type": "Person", name: f.author },
-    publisher: {
-      "@type": "Organization",
-      name: "Human Endurance Podcast",
-      logo: {
-        "@type": "ImageObject",
-        url: `${SITE_URL}/og-image.png`,
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      headline: f.title,
+      description: f.description,
+      image: image ? [image] : undefined,
+      datePublished: f.date,
+      keywords: f.tags?.join(", "),
+      author: { "@type": "Person", name: f.author },
+      publisher: {
+        "@type": "Organization",
+        "@id": `${SITE_URL}/#organization`,
+        name: "Human Endurance Podcast",
+        logo: {
+          "@type": "ImageObject",
+          url: `${SITE_URL}/og-image.png`,
+        },
       },
+      mainEntityOfPage: { "@type": "WebPage", "@id": canonical },
+      ...(episode
+        ? {
+            isBasedOn: {
+              "@type": "PodcastEpisode",
+              name: episode.title,
+              url: `${SITE_URL}/podcast/${episode.slug}`,
+            },
+          }
+        : {}),
     },
-    mainEntityOfPage: { "@type": "WebPage", "@id": canonical },
-  };
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Blog",
+          item: `${SITE_URL}/blog`,
+        },
+        { "@type": "ListItem", position: 3, name: f.title, item: canonical },
+      ],
+    },
+  ];
 
   return (
     <>
@@ -47,6 +76,7 @@ const BlogPost = () => {
         type="article"
         publishedTime={f.date}
         author={f.author}
+        tags={f.tags}
         jsonLd={jsonLd}
       />
 
@@ -77,6 +107,10 @@ const BlogPost = () => {
                 <img
                   src={f.cover}
                   alt={f.coverAlt ?? f.title}
+                  {...{ fetchpriority: "high" }}
+                  decoding="async"
+                  width={896}
+                  height={504}
                   className="h-full w-full object-contain"
                 />
               </div>
@@ -109,17 +143,21 @@ const BlogPost = () => {
                   <Headphones className="h-5 w-5 text-primary" />
                 </div>
                 <div>
-                  <p className="font-semibold">Listen to the podcast</p>
+                  <p className="font-semibold">
+                    {episode ? "Listen to the full episode" : "Listen to the podcast"}
+                  </p>
                   <p className="text-sm text-muted-foreground">
-                    New episodes weekly on Spotify, Apple, and YouTube.
+                    {episode
+                      ? episode.topic
+                      : "New episodes weekly on Spotify, Apple, and YouTube."}
                   </p>
                 </div>
               </div>
               <Link
-                to="/#listen"
-                className="px-5 py-2.5 rounded-full bg-primary text-primary-foreground text-sm font-medium hover:opacity-90 transition-opacity"
+                to={episode ? `/podcast/${episode.slug}` : "/#listen"}
+                className="px-5 py-2.5 rounded-full bg-primary text-primary-foreground text-sm font-medium hover:opacity-90 transition-opacity whitespace-nowrap"
               >
-                Where to listen
+                {episode ? "Go to the episode" : "Where to listen"}
               </Link>
             </div>
 

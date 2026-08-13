@@ -14,9 +14,10 @@ export type Episode = {
   guest: string;
   date: string;
   description: string;
-  /** Sanitised show notes: only p/ul/li/a/strong/em survive the fetch step. */
-  notesHtml: string;
+  /** Local copy under /podcast; falls back to `remoteImage` if the download failed. */
   image: string | null;
+  /** The feed's CDN artwork URL, kept as a fallback. */
+  remoteImage: string | null;
   audio: string | null;
   spotifyUrl: string | null;
   durationSeconds: number | null;
@@ -54,6 +55,18 @@ export function formatDuration(seconds: number | null): string | null {
   const h = Math.floor(seconds / 3600);
   const m = Math.round((seconds % 3600) / 60);
   return h ? `${h} h ${m} min` : `${m} min`;
+}
+
+/**
+ * Absolute artwork URL for OpenGraph and JSON-LD, which reject relative paths.
+ * `image` is normally a local path, but stays an absolute CDN URL when the
+ * build-time download failed for that episode.
+ */
+export function absoluteImage(episode: Episode, siteUrl: string): string {
+  if (!episode.image) return `${siteUrl}/og-image.png`;
+  return episode.image.startsWith("http")
+    ? episode.image
+    : `${siteUrl}${episode.image}`;
 }
 
 /** The line under the title: guest first, since that's what people search for. */

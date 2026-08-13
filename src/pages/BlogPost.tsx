@@ -70,11 +70,14 @@ const BlogPost = () => {
 
           {f.cover && (
             <div className="my-10 px-6">
-              <div className="max-w-4xl mx-auto aspect-[16/9] overflow-hidden rounded-2xl">
+              {/* Podcast episode art is square while race photos are wide, so the
+                  hero contains rather than crops — a 16/9 cover would cut the
+                  guest's name off the square artwork. */}
+              <div className="max-w-4xl mx-auto aspect-[16/9] overflow-hidden rounded-2xl bg-card border border-border">
                 <img
                   src={f.cover}
                   alt={f.coverAlt ?? f.title}
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-contain"
                 />
               </div>
             </div>
@@ -84,6 +87,21 @@ const BlogPost = () => {
             <div className="prose prose-invert prose-lg max-w-none prose-headings:font-[Roca_One] prose-headings:tracking-wide prose-a:text-primary hover:prose-a:underline prose-strong:text-foreground prose-blockquote:border-primary prose-img:rounded-xl">
               <Component />
             </div>
+
+            {f.substackUrl && (
+              <p className="mt-10 text-sm text-muted-foreground">
+                Originally published on{" "}
+                <a
+                  href={f.substackUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline"
+                >
+                  Substack
+                </a>
+                . Subscribe there to get new posts by email.
+              </p>
+            )}
 
             <div className="mt-16 rounded-2xl border border-border bg-card p-6 flex flex-col sm:flex-row items-start sm:items-center gap-4 justify-between">
               <div className="flex items-center gap-4">

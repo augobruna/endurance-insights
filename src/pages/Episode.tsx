@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import EpisodeMeta from "@/components/podcast/EpisodeMeta";
+import EpisodeNotes from "@/components/podcast/EpisodeNotes";
 import { getEpisodeBySlug, getAdjacentEpisodes } from "@/lib/episodes";
 import { SITE_URL } from "@/lib/posts";
 
@@ -148,12 +149,7 @@ const Episode = () => {
             )}
 
             <h2 className="text-2xl mt-14 mb-4">Episode notes</h2>
-            {/* Show notes come from our own RSS feed and are reduced at build
-                time to p/ul/li/a/strong/em by scripts/fetch-episodes.mjs. */}
-            <div
-              className="prose prose-invert prose-lg max-w-none prose-headings:font-[Roca_One] prose-a:text-primary hover:prose-a:underline prose-strong:text-foreground"
-              dangerouslySetInnerHTML={{ __html: episode.notesHtml }}
-            />
+            <EpisodeNotes key={episode.slug} slug={episode.slug} />
 
             {(prev || next) && (
               <nav

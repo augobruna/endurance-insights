@@ -14,9 +14,10 @@ export type Episode = {
   guest: string;
   date: string;
   description: string;
-  /** Sanitised show notes: only p/ul/li/a/strong/em survive the fetch step. */
-  notesHtml: string;
+  /** Local copy under /podcast; falls back to `remoteImage` if the download failed. */
   image: string | null;
+  /** The feed's CDN artwork URL, kept as a fallback. */
+  remoteImage: string | null;
   audio: string | null;
   spotifyUrl: string | null;
   durationSeconds: number | null;

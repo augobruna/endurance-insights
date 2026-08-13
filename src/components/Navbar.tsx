@@ -6,6 +6,7 @@ import logo from "@/assets/logo.png";
 type NavItem = { label: string; href: string; internal?: boolean };
 
 const items: NavItem[] = [
+  { label: "Episodes", href: "/podcast", internal: true },
   { label: "Series", href: "/#series" },
   { label: "Hosts", href: "/#hosts" },
   { label: "Blog", href: "/blog", internal: true },

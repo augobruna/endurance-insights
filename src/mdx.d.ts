@@ -1,17 +1,8 @@
 declare module "*.mdx" {
   import type { ComponentType } from "react";
-  export const frontmatter: {
-    title: string;
-    slug: string;
-    description: string;
-    date: string;
-    author: string;
-    cover?: string;
-    coverAlt?: string;
-    tags?: string[];
-    canonical?: string;
-    substackUrl?: string;
-  };
+  // Inline import so this stays an ambient declaration, and so the frontmatter
+  // shape has one definition rather than two copies drifting apart.
+  export const frontmatter: import("@/lib/posts").PostFrontmatter;
   const MDXComponent: ComponentType;
   export default MDXComponent;
 }

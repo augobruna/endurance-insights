@@ -7,13 +7,77 @@ The Human Endurance Podcast features two series: an Expert Series with specialis
 ## Pages
 
 - [Home](/): Podcast overview, hosts, series, featured episodes, and where to listen.
+- [Episodes](/podcast): All 42 episodes with show notes and guests.
 - [Blog](/blog): Long-form articles on endurance training, race reports, and interviews.
+
+## Blog posts
+
+- [Running 100km at 3:47min/km with Pascal Rüeger](/blog/pascal-rueger-100km-swiss-record): Pascal broke the Swiss national record that had stood since 1985 by almost 9 minutes.
+- [Marginal Gains for Competitive Age-Groupers](/blog/marginal-gains-for-competitive-age-groupers): New Episode with Mikael Eriksson, founder of Scientific Triathlon & Host of That Triathlon Show
+- [Why Cross-Training Might Be the Most Underrated Tool in Endurance Sports](/blog/cross-training-endurance-sports): The 4 Cs of becoming a more complete, resilient, and consistent athlete
+- [From Devastating Back Injury at 17 to Going Pro at 32: Nina Derron's Triathlon Journey](/blog/nina-derron-back-injury-to-pro-triathlete): “You can do different things at the same time, but you cannot go a hundred percent at all of them.” - Nina Derron
+- [The Journey of Pro Triathlete Leana Bissig: From Uni to T100 Racing](/blog/leana-bissig-uni-to-t100-racing): Patience over quick fixes, progression over pressure, and the truth about transitioning to middle distance
+- [Learnings from One of the World's Top Triathlon Coaches, Reto Braendli](/blog/reto-braendli-triathlon-coaching-lessons): Foundation over shortcuts, communication over data, and the truth about training elite triathletes
+- [From Medical Student to IRONMAN 70.3 AG World Champion: Samuel Studer](/blog/samuel-studer-ironman-703-world-champion): “I don’t say I don’t have time. I always say it’s just a matter of how you set your priorities” - Samuel
+- [Lessons from 31 Ironmans & 25 Years Coaching Triathlon with Coach Joserra](/blog/joserra-31-ironmans-25-years-coaching): Carpe Diem. That was his advice to our listeners.
+- [What Elite Athletes Know About Mental Training (That You Don't)](/blog/stu-holliday-mental-training): Turns out mental toughness is as trainable as your VO2 max - if you’re willing to put in the work
+- [Key Takeaways from Our Conversation with Coach David Tilbury-Davis](/blog/david-tilbury-davis-triathlon-coaching): Includes: Foundations of triathlon training; Imposter Syndrome; AI in coaching; Lactate; Common mistakes in training
+- [The "Soft Approach" to Running Faster with Coach Brian](/blog/coach-brian-soft-approach-running-faster): Our latest episode with Brian Boisvert, a 2h44 marathoner and running coach, offers a fresh perspective on running that goes way beyond finishing times
+- [From Marathon to Ultra: What Jazmine Lowther Taught Us About Making the Leap](/blog/jazmine-lowther-marathon-to-ultra): Jasmine Lowther, a Pro Ultra Runner & Coach, 9th @ OCC UTMB 2025, came on the Human Endurance Podcast a few weeks ago to share our knowledge with us. Here's everything we learned.
+- [A Practical Guide to Fueling for Performance with Danielle de Francesco](/blog/danielle-de-francesco-fueling-for-performance): What if I told you that the secret to unlocking your athletic potential isn't found in your training plan, but on your dinner plate?
+
+## Episodes
+
+- [How to coach beyond data](/podcast/how-to-coach-beyond-data-bevan-mckinnon) — with Bevan McKinnon (2026-07-28)
+- [She trained with ChatGPT and ran a 2h43 Marathon Debut](/podcast/she-trained-with-chatgpt-and-ran-a-2h43-ronja-hofstetter) — with Ronja Hofstetter (2026-06-29)
+- [How Taping her Watch Unlocked a 2h34 marathon](/podcast/how-taping-her-watch-unlocked-a-2h34-amanda-martin) — with Amanda Martin (2026-06-15)
+- [Everything You Need to Know Before Your First Trail Ultra](/podcast/everything-you-need-to-know-before-your-ash-daniels) — with Ash Daniels (2026-05-25)
+- [Breaking the Swiss 100km Record @ 3:47/km Pace](/podcast/breaking-the-swiss-100km-record-3-47-km-pace-pascal-rueger) — with Pascal Rüeger (2026-05-12)
+- [Marginal Gains for Competitive Age-Groupers with Mikael Eriksson, Founder of Scientific Triathlon, Host of That Triathlon Show](/podcast/marginal-gains-for-competitive-age-groupers-mikael-eriksson) — with Mikael Eriksson (2026-05-03)
+- [The Power of Cross Training & Strength Training for Endurance Athletes](/podcast/the-power-of-cross-training-and-strength-training) (2026-03-11)
+- [From Devastating Back Injury at 17 to Going Pro at 32](/podcast/from-devastating-back-injury-at-17-to-going-nina-derron) — with Nina Derron (2026-02-23)
+- [Self-Coached to a World Record: How Jonathan Broke the 6h Cycling World Record & Rose into Pro Triathlon at 28](/podcast/self-coached-to-a-world-record-how-broke-jonathan-guisolan) — with Jonathan Guisolan (2026-02-08)
+- [The journey of Pro Triathlete Leana Bissig - From University to T100 racing](/podcast/the-journey-of-pro-triathlete-leana-bissig-from-university) — with Leana Bissig (2026-01-04)
+- [Inside Elite Triathlon Coaching: Aerobic Foundations, Body Composition & The Art of Individualization](/podcast/inside-elite-triathlon-coaching-aerobic-reto-brandli) — with Reto Brändli (2025-12-21)
+- [2025 IRONMAN 70.3 AG World Champion, 2025 IRONMAN Switzerland Champion & Medical Student](/podcast/2025-ironman-70-3-ag-world-champion-2025-samuel-studer) — with Samuel Studer (2025-12-07)
+- [Lessons from 31 Ironmans & 25 Years Coaching Triathlon: The Training Process That Builds Lifelong Endurance Athletes](/podcast/lessons-from-31-ironmans-and-25-years-joserra-callen) — with Joserra Callen (2025-11-30)
+- [Mental Training Secrets from an Olympic Sports Psychologist](/podcast/mental-training-secrets-from-an-olympic-stu-holliday) — with Stu Holliday (2025-11-24)
+- [An Evidence-Led Approach to Elite Triathlon](/podcast/an-evidence-led-approach-to-elite-triathlon-david-tilbury-davis) — with David Tilbury Davis (2025-10-27)
+- [The Soft Approach to Hard Goals: A Sustainable Framework for Marathon Training](/podcast/the-soft-approach-to-hard-goals-brian-boisvert) — with Brian Boisvert (2025-10-12)
+- [Practical tips on how to step into Trail Running](/podcast/practical-tips-on-how-to-step-into-trail-jazmine-lowther) — with Jazmine Lowther (2025-08-29)
+- [RED-S, Recovery, and Racing: A Practical Guide to Fueling for Performance with a Dietitian, Pro-Cyclist, Ex Pro-Triathlete & Ex Pro-Swimmer](/podcast/red-recovery-and-racing-a-practical-guide-danielle-de-francesco) — with Danielle De Francesco (2025-07-30)
+- [25-Year-Old Ultra Running Phenom: Hans Troyer, Professional Ultra-Runner, 8th place at Western States 2025](/podcast/25-year-old-ultra-running-phenom-hans-troyer) — with Hans Troyer (2025-07-12)
+- [How to Maximize your Triathlon Training with World Class Coach with 15+ Years of Experience](/podcast/how-to-maximize-your-triathlon-training-tobias-haumann) — with Tobias Haumann (2025-05-11)
+- [Nutrition & Hydration for Endurance Athletes](/podcast/nutrition-and-hydration-for-endurance-vic-johnson) — with Vic Johnson (2025-03-16)
+- [58.4km swim in 15h23min or 1:35min/100m, First person to ever swim from New Norfolk to Bruny Island](/podcast/58-4km-swim-in-15h23min-or-1-35min-100m-anton-ilchenko) — with Anton Ilchenko (2025-03-02)
+- [Simplicity in Training is Key: How we lost our sense of feel by blindly chasing data](/podcast/simplicity-in-training-is-key-how-we-lost-tom-fokkens-ancery) — with Tom Fokkens-Ancery (2025-02-07)
+- [One for the Guinness World Record Books, Finishing the hardest Triathlon in the world Arch2Arc](/podcast/one-for-the-guinness-world-record-books-paul-robinson) — with Paul Robinson (2025-01-23)
+- [Beyond the HRV hype: How can HRV actually be useful?](/podcast/beyond-the-hrv-hype-how-can-hrv-actually-be-marco-altini) — with Marco Altini (2025-01-14)
+- [The Science and Art of Marathon Running from a 2h23 Marathoner](/podcast/the-science-and-art-of-marathon-running-moritz-keinath) — with Moritz Keinath (2024-12-17)
+- [Meet your host, Fabi](/podcast/meet-your-host-fabi) (2024-12-04)
+- [How anyone can become a great swimmer, from the most famous online swimming coach](/podcast/how-anyone-can-become-a-great-swimmer-fares-ksebati) — with Fares Ksebati (2024-11-24)
+- [Smoke to Stroke: Roberto’s Journey from Heavy Smoking to Endurance Swimming](/podcast/smoke-to-stroke-journey-from-heavy-smoking-roberto-lescrauwaet) — with Roberto Lescrauwaet (2024-11-10)
+- [Leveraging AI in Endurance Sports](/podcast/leveraging-ai-in-endurance-sports-markus-rummel) — with Markus Rummel (2024-10-13)
+- [Managing Pregnancy and Motherhood alongside a Pro Career in Triathlon](/podcast/managing-pregnancy-and-motherhood-alongside-kayla-pokorny) — with Kayla Pokorny (2024-09-20)
+- [Navigating First Marathons: What to Expect, How to train, What to consider](/podcast/navigating-first-marathons-what-to-expect-how-to-train) (2024-09-10)
+- [🇧🇷 Completando o seu primeiro Ironman e se qualificando para o mundial](/podcast/completando-o-seu-primeiro-ironman-e-se-bruna-lopes) — with Bruna Lopes (2024-08-25)
+- [[Part 2] The row across the Atlantic: 4 Women, 1 Ocean, 3000 miles](/podcast/part-2-the-row-across-the-atlantic-4-women-victoria-monk) — with Victoria Monk (2024-07-28)
+- [[Part 1] Rowing across the Atlantic in 39 days, Empowering Women in and through Sport](/podcast/part-1-rowing-across-the-atlantic-in-39-victoria-monk) — with Victoria Monk (2024-07-17)
+- [From triathlon rookie to pro in 1 year, balancing a career as a veterinarian and a pro triathlete, racing against the best in the sport](/podcast/from-triathlon-rookie-to-pro-in-1-year-kaylee-slade) — with Kaylee Slade (2024-06-19)
+- [Racing in endurance bike packing events of more than 1'000km & 20'000m elevation│Julia Schopka](/podcast/racing-in-endurance-bike-packing-events-julia-skrolewski) — with Julia Skrolewski (2024-05-13)
+- [Meet your host, Bruna](/podcast/meet-your-host-bruna) (2024-04-28)
+- [Racing the hardest triathlon in the world from London to Paris: Arch to Arc](/podcast/racing-the-hardest-triathlon-in-the-world-paul-robinson) — with Paul Robinson (2024-04-14)
+- [23 Marathons with a 2h44 PB](/podcast/23-marathons-with-a-2h44-pb-pedro-freitas) — with Pedro Freitas (2024-03-24)
+- [Journey to sub 3h marathon](/podcast/journey-to-sub-3h-marathon-rhetta-maynard) — with Rhetta Maynard (2024-03-03)
+- [7 marathons in all 7 continents](/podcast/7-marathons-in-all-7-continents-kate-smith) — with Kate Smith (2024-02-04)
 
 ## Listen
 
 - [Spotify](https://open.spotify.com/show/4JR5cvFpYmuvaQxbx2D9nb): Full episode catalog on Spotify.
 - [Apple Podcasts](https://podcasts.apple.com/us/podcast/human-endurance/id1729061731): Full episode catalog on Apple Podcasts.
 - [YouTube](https://www.youtube.com/@HumanEndurance): Video episodes on YouTube.
+- [RSS](https://anchor.fm/s/fd7296f8/podcast/rss): Podcast feed.
+- [Blog feed](/feed.xml): Atom feed of blog posts.
 
 ## Optional
 

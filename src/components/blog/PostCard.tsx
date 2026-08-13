@@ -28,7 +28,13 @@ const PostCard = ({
             <img
               src={post.cover}
               alt={post.coverAlt ?? post.title}
-              loading="lazy"
+              // The first card is above the fold, so lazy-loading it would
+              // delay the LCP on /blog.
+              loading={index === 0 ? "eager" : "lazy"}
+              {...(index === 0 ? { fetchpriority: "high" } : {})}
+              decoding="async"
+              width={280}
+              height={280}
               className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
             />
           </div>

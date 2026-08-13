@@ -1,12 +1,12 @@
 import { Link, useParams, Navigate } from "react-router-dom";
-import { ArrowLeft, ArrowRight, ExternalLink } from "lucide-react";
+import { ArrowLeft, ArrowRight, BookOpen, ExternalLink } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import EpisodeMeta from "@/components/podcast/EpisodeMeta";
 import EpisodeNotes from "@/components/podcast/EpisodeNotes";
 import { getEpisodeBySlug, getAdjacentEpisodes } from "@/lib/episodes";
-import { SITE_URL } from "@/lib/posts";
+import { SITE_URL, getPostByEpisodeSlug } from "@/lib/posts";
 
 const LISTEN_LINKS = [
   {
@@ -24,6 +24,7 @@ const Episode = () => {
   if (!episode) return <Navigate to="/podcast" replace />;
 
   const { prev, next } = getAdjacentEpisodes(slug);
+  const companion = getPostByEpisodeSlug(episode.slug);
   const canonical = `${SITE_URL}/podcast/${episode.slug}`;
   const image = episode.image ?? `${SITE_URL}/og-image.png`;
 
@@ -145,6 +146,28 @@ const Episode = () => {
                     </a>
                   ))}
                 </div>
+              </div>
+            )}
+
+            {companion && (
+              <div className="mt-10 rounded-2xl border border-border bg-card p-6 flex flex-col sm:flex-row items-start sm:items-center gap-4 justify-between">
+                <div className="flex items-center gap-4">
+                  <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center">
+                    <BookOpen className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <p className="font-semibold">Read the companion article</p>
+                    <p className="text-sm text-muted-foreground">
+                      {companion.frontmatter.title}
+                    </p>
+                  </div>
+                </div>
+                <Link
+                  to={`/blog/${companion.frontmatter.slug}`}
+                  className="px-5 py-2.5 rounded-full bg-primary text-primary-foreground text-sm font-medium hover:opacity-90 transition-opacity whitespace-nowrap"
+                >
+                  Read the article
+                </Link>
               </div>
             )}
 

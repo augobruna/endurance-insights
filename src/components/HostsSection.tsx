@@ -52,7 +52,7 @@ const HostsSection = () => {
             >
               <div className="relative w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden p-[2px] gradient-bg">
                 <div className="w-full h-full rounded-full overflow-hidden bg-card flex items-center justify-center">
-                  <img src={host.image} alt={`${host.name} — Host of Human Endurance Podcast`} loading="lazy" className="w-full h-full object-cover" />
+                  <img src={host.image} alt={`${host.name} — Host of Human Endurance Podcast`} loading="lazy" decoding="async" width={192} height={192} className="w-full h-full object-cover" />
                 </div>
               </div>
               <h3 className="text-3xl mb-1">{host.name}</h3>

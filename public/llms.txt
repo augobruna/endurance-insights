@@ -7,11 +7,12 @@ The Human Endurance Podcast features two series: an Expert Series with specialis
 ## Pages
 
 - [Home](/): Podcast overview, hosts, series, featured episodes, and where to listen.
-- [Episodes](/podcast): All 42 episodes with show notes and guests.
+- [Episodes](/podcast): All 43 episodes with show notes and guests.
 - [Blog](/blog): Long-form articles on endurance training, race reports, and interviews.
 
 ## Blog posts
 
+- [Your Injury Didn’t Start When It Started Hurting](/blog/martin-kumm-injury-robustness): A WorldTour sports chiropractor on robustness, foot mechanics, and what to stop worrying about
 - [Running 100km at 3:47min/km with Pascal Rüeger](/blog/pascal-rueger-100km-swiss-record): Pascal broke the Swiss national record that had stood since 1985 by almost 9 minutes.
 - [Marginal Gains for Competitive Age-Groupers](/blog/marginal-gains-for-competitive-age-groupers): New Episode with Mikael Eriksson, founder of Scientific Triathlon & Host of That Triathlon Show
 - [Why Cross-Training Might Be the Most Underrated Tool in Endurance Sports](/blog/cross-training-endurance-sports): The 4 Cs of becoming a more complete, resilient, and consistent athlete
@@ -28,6 +29,7 @@ The Human Endurance Podcast features two series: an Expert Series with specialis
 
 ## Episodes
 
+- [Sports chiropractor and lifelong athlete on injury, recovery and building a body you can trust](/podcast/sports-chiropractor-and-lifelong-athlete-martin-kumm) — with Martin Kumm (2026-08-13)
 - [How to coach beyond data](/podcast/how-to-coach-beyond-data-bevan-mckinnon) — with Bevan McKinnon (2026-07-28)
 - [She trained with ChatGPT and ran a 2h43 Marathon Debut](/podcast/she-trained-with-chatgpt-and-ran-a-2h43-ronja-hofstetter) — with Ronja Hofstetter (2026-06-29)
 - [How Taping her Watch Unlocked a 2h34 marathon](/podcast/how-taping-her-watch-unlocked-a-2h34-amanda-martin) — with Amanda Martin (2026-06-15)

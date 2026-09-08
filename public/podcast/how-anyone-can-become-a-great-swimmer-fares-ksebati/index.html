@@ -1,0 +1,55 @@
+<!doctype html>
+<!--
+  Redirect stub for a retired episode slug.
+
+  This episode was published crediting the wrong guest ("Fares Ksebati" — a real
+  but different swim coach). The guest is Brenton Ford of Effortless Swimming, so
+  the slug changed and this URL was left behind. It was in the sitemap from
+  2024-11-24, so assume it is indexed and linked.
+
+  GitHub Pages cannot issue a 301, so this static page canonicals and bounces to
+  the new URL instead. Vite copies public/ into dist/ verbatim, and prerender.mjs
+  only writes paths for slugs present in episodes.json, so nothing overwrites it.
+
+  Safe to delete once the old URL stops showing up in search traffic.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Moved: How anyone can become a great swimmer, with Brenton Ford</title>
+    <link
+      rel="canonical"
+      href="https://humanendurancepodcast.com/podcast/how-anyone-can-become-a-great-swimmer-brenton-ford"
+    />
+    <meta
+      http-equiv="refresh"
+      content="0; url=/podcast/how-anyone-can-become-a-great-swimmer-brenton-ford"
+    />
+    <style>
+      body {
+        font-family: system-ui, -apple-system, sans-serif;
+        max-width: 34rem;
+        margin: 20vh auto;
+        padding: 0 1.5rem;
+        line-height: 1.6;
+      }
+      a {
+        color: #6d28d9;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>This episode moved</h1>
+    <p>
+      It now lives at
+      <a href="/podcast/how-anyone-can-become-a-great-swimmer-brenton-ford"
+        >How anyone can become a great swimmer, with Brenton Ford</a
+      >.
+    </p>
+    <script>
+      location.replace(
+        "/podcast/how-anyone-can-become-a-great-swimmer-brenton-ford"
+      );
+    </script>
+  </body>
+</html>

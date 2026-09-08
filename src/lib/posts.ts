@@ -13,6 +13,11 @@ export type PostFrontmatter = {
   substackUrl?: string;
   /** Slug of the episode this post accompanies, for cross-linking both ways. */
   episodeSlug?: string;
+  /**
+   * Q&As for the foot of the post. Kept here rather than in the body so the
+   * rendered section and the FAQPage schema cannot drift apart.
+   */
+  faq?: { question: string; answer: string }[];
 };
 
 export type Post = {

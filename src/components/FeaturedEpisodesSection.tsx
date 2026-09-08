@@ -8,12 +8,12 @@ import { episodes, formatDuration } from "@/lib/episodes";
  * leads with; anything that no longer matches an episode slug is skipped.
  */
 const FEATURED = [
-  "how-to-coach-beyond-data-bevan-mckinnon",
-  "breaking-the-swiss-100km-record-3-47-km-pace-pascal-rueger",
-  "marginal-gains-for-competitive-age-groupers-mikael-eriksson",
+  "25-year-old-ultra-running-phenom-hans-troyer",
   "beyond-the-hrv-hype-how-can-hrv-actually-be-marco-altini",
-  "mental-training-secrets-from-an-olympic-stu-holliday",
-  "from-devastating-back-injury-at-17-to-going-nina-derron",
+  "nutrition-and-hydration-for-endurance-vic-johnson",
+  "breaking-the-swiss-100km-record-3-47-km-pace-pascal-rueger",
+  "practical-tips-on-how-to-step-into-trail-jazmine-lowther",
+  "how-anyone-can-become-a-great-swimmer-brenton-ford",
 ];
 
 const formatDate = (iso: string) =>

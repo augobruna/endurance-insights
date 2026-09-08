@@ -7,11 +7,12 @@ The Human Endurance Podcast features two series: an Expert Series with specialis
 ## Pages
 
 - [Home](/): Podcast overview, hosts, series, featured episodes, and where to listen.
-- [Episodes](/podcast): All 43 episodes with show notes and guests.
+- [Episodes](/podcast): All 44 episodes with show notes and guests.
 - [Blog](/blog): Long-form articles on endurance training, race reports, and interviews.
 
 ## Blog posts
 
+- [How to Prepare for a Trail Race: Race-Day Lessons From Ultra Runner Ido Dassa](/blog/ido-dassa-trail-race-strategy): Israeli 100 km champion Ido Dassa explains how to read a course profile, manage effort on climbs and descents, and build a fueling plan that holds up on race day.
 - [Your Injury Didn’t Start When It Started Hurting](/blog/martin-kumm-injury-robustness): A WorldTour sports chiropractor on robustness, foot mechanics, and what to stop worrying about
 - [Running 100km at 3:47min/km with Pascal Rüeger](/blog/pascal-rueger-100km-swiss-record): Pascal broke the Swiss national record that had stood since 1985 by almost 9 minutes.
 - [Marginal Gains for Competitive Age-Groupers](/blog/marginal-gains-for-competitive-age-groupers): New Episode with Mikael Eriksson, founder of Scientific Triathlon & Host of That Triathlon Show
@@ -29,6 +30,7 @@ The Human Endurance Podcast features two series: an Expert Series with specialis
 
 ## Episodes
 
+- [Why your trail race never goes to plan](/podcast/why-your-trail-race-never-goes-to-plan-ido-dassa) — with Ido Dassa (2026-08-29)
 - [Sports chiropractor and lifelong athlete on injury, recovery and building a body you can trust](/podcast/sports-chiropractor-and-lifelong-athlete-martin-kumm) — with Martin Kumm (2026-08-13)
 - [How to coach beyond data](/podcast/how-to-coach-beyond-data-bevan-mckinnon) — with Bevan McKinnon (2026-07-28)
 - [She trained with ChatGPT and ran a 2h43 Marathon Debut](/podcast/she-trained-with-chatgpt-and-ran-a-2h43-ronja-hofstetter) — with Ronja Hofstetter (2026-06-29)
@@ -57,7 +59,7 @@ The Human Endurance Podcast features two series: an Expert Series with specialis
 - [Beyond the HRV hype: How can HRV actually be useful?](/podcast/beyond-the-hrv-hype-how-can-hrv-actually-be-marco-altini) — with Marco Altini (2025-01-14)
 - [The Science and Art of Marathon Running from a 2h23 Marathoner](/podcast/the-science-and-art-of-marathon-running-moritz-keinath) — with Moritz Keinath (2024-12-17)
 - [Meet your host, Fabi](/podcast/meet-your-host-fabi) (2024-12-04)
-- [How anyone can become a great swimmer, from the most famous online swimming coach](/podcast/how-anyone-can-become-a-great-swimmer-fares-ksebati) — with Fares Ksebati (2024-11-24)
+- [How anyone can become a great swimmer, from the most famous online swimming coach](/podcast/how-anyone-can-become-a-great-swimmer-brenton-ford) — with Brenton Ford (2024-11-24)
 - [Smoke to Stroke: Roberto’s Journey from Heavy Smoking to Endurance Swimming](/podcast/smoke-to-stroke-journey-from-heavy-smoking-roberto-lescrauwaet) — with Roberto Lescrauwaet (2024-11-10)
 - [Leveraging AI in Endurance Sports](/podcast/leveraging-ai-in-endurance-sports-markus-rummel) — with Markus Rummel (2024-10-13)
 - [Managing Pregnancy and Motherhood alongside a Pro Career in Triathlon](/podcast/managing-pregnancy-and-motherhood-alongside-kayla-pokorny) — with Kayla Pokorny (2024-09-20)

@@ -186,7 +186,6 @@ const GUEST_BY_SLUG_HINT = {
   "25-year-old-ultra-running-phenom": "Hans Troyer",
   "the-journey-of-pro-triathlete-leana-bissig": "Leana Bissig",
   "leveraging-ai-in-endurance-sports": "Markus Rummel",
-  "how-anyone-can-become-a-great-swimmer": "Fares Ksebati",
   "racing-in-endurance-bike-packing-events": "Julia Skrolewski",
   "the-power-of-cross-training": "",
   "navigating-first-marathons": "",

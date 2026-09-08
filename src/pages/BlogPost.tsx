@@ -64,6 +64,19 @@ const BlogPost = () => {
         { "@type": "ListItem", position: 3, name: f.title, item: canonical },
       ],
     },
+    ...(f.faq?.length
+      ? [
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: f.faq.map((item) => ({
+              "@type": "Question",
+              name: item.question,
+              acceptedAnswer: { "@type": "Answer", text: item.answer },
+            })),
+          },
+        ]
+      : []),
   ];
 
   return (
@@ -120,6 +133,18 @@ const BlogPost = () => {
           <div className="px-6 max-w-3xl mx-auto">
             <div className="prose prose-invert prose-lg max-w-none prose-headings:font-[Roca_One] prose-headings:tracking-wide prose-a:text-primary hover:prose-a:underline prose-strong:text-foreground prose-blockquote:border-primary prose-img:rounded-xl">
               <Component />
+
+              {f.faq?.length ? (
+                <section aria-labelledby="faq">
+                  <h2 id="faq">Frequently asked questions</h2>
+                  {f.faq.map((item) => (
+                    <div key={item.question}>
+                      <h3>{item.question}</h3>
+                      <p>{item.answer}</p>
+                    </div>
+                  ))}
+                </section>
+              ) : null}
             </div>
 
             {f.substackUrl && (

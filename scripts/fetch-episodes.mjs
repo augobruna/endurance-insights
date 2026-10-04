@@ -143,7 +143,7 @@ const textOf = (html) => {
 
 const kebab = (s) =>
   s
-    .normalize("NFD")
+    .normalize("NFKD")
     .replace(/[̀-ͯ]/g, "")
     .toLowerCase()
     .replace(/&/g, " and ")

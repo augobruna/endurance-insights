@@ -7,7 +7,7 @@ The Human Endurance Podcast features two series: an Expert Series with specialis
 ## Pages
 
 - [Home](/): Podcast overview, hosts, series, featured episodes, and where to listen.
-- [Episodes](/podcast): All 44 episodes with show notes and guests.
+- [Episodes](/podcast): All 45 episodes with show notes and guests.
 - [Blog](/blog): Long-form articles on endurance training, race reports, and interviews.
 
 ## Blog posts
@@ -30,6 +30,7 @@ The Human Endurance Podcast features two series: an Expert Series with specialis
 
 ## Episodes
 
+- [VO₂max, HRV, Lab Testing: What Actually Changes Your Training](/podcast/vo2max-hrv-lab-testing-what-actually-marco-altini) — with Marco Altini (2026-09-08)
 - [Why your trail race never goes to plan](/podcast/why-your-trail-race-never-goes-to-plan-ido-dassa) — with Ido Dassa (2026-08-29)
 - [Sports chiropractor and lifelong athlete on injury, recovery and building a body you can trust](/podcast/sports-chiropractor-and-lifelong-athlete-martin-kumm) — with Martin Kumm (2026-08-13)
 - [How to coach beyond data](/podcast/how-to-coach-beyond-data-bevan-mckinnon) — with Bevan McKinnon (2026-07-28)
